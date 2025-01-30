@@ -1,0 +1,13 @@
+.region {
+    fill: #cccccc; /* Har bir viloyatning boshlang'ich rangi */
+    transition: fill 0.3s ease;
+}
+
+.region.hover {
+    fill: #ffcc00; /* Hoverda rangi o'zgartirish */
+}
+
+.uzbekistan-map {
+    width: 100%;
+    height: auto;
+}
