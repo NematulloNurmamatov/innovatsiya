@@ -318,7 +318,7 @@ const Navbar = () => {
 
                 <Link
                     to="/"
-                    className="flex  flex-col sm:flex-row items-start text-gray-900 xl:mb-0"
+                    className="flex items-center sm:flex-row text-gray-900 xl:mb-0"
                 >
                     <img
                         className="w-10 m-2"
@@ -333,7 +333,7 @@ const Navbar = () => {
                     </span>
 
                     {/* Kichik ekranlar uchun matn */}
-                    <div className="ml-2 font-bold sm:hidden"> <p className="text-md"> MILLIY ILMIY PORTALI</p> </div>
+                    <div className="ml-2 font-bold sm:hidden mb-[-20px]"> <p className="text-md"> MILLIY ILMIY <br /> PORTALI</p> </div>
                 </Link>
 
 
@@ -382,13 +382,16 @@ const Navbar = () => {
                 className={`transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-[500px]" : "max-h-0"
                     } bg-white xl:hidden`}
             >
-                <Menu
-                    onClick={onClick}
-                    selectedKeys={[current]}
-                    mode="vertical"
-                    items={items}
-                />
-                <div className=" p-4">
+                <div className="!w-[40%]">
+                    <Menu
+                        onClick={onClick}
+                        selectedKeys={[current]}
+                        mode="vertical"
+                        items={items}
+                        className=""
+                    />
+                </div>
+                <div className=" w-[40%] p-4">
                     <Select defaultValue="uzbekistan" className="w-full hidden">
                         <Option value="uzbekistan">UZB</Option>
                         <Option value="rusia">RUS</Option>
