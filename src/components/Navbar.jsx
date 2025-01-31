@@ -1,21 +1,25 @@
-import React, { useState } from 'react';
-import { Button, Menu, Select } from 'antd';
-import { Link } from 'react-router-dom';
-import { MailOutlined, SettingOutlined } from '@ant-design/icons';
-import { Option } from 'antd/es/mentions';
-import { IoMdExit } from 'react-icons/io';
-import { CiSearch } from 'react-icons/ci';
-import { FaSearch } from 'react-icons/fa';
-import { IoSearch } from 'react-icons/io5';
+import React, { useState } from "react";
+import { Button, Menu, Select } from "antd";
+import { Link } from "react-router-dom";
+import { IoMdExit } from "react-icons/io";
+import { IoSearch } from "react-icons/io5";
+import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
+
+const { Option } = Select;
 
 const Navbar = () => {
     // State to handle menu selection
-    const [current, setCurrent] = useState('mail');
+    const [current, setCurrent] = useState("mail");
+    const [menuOpen, setMenuOpen] = useState(false);
 
     // Handle menu item click
     const onClick = (e) => {
-        console.log('Clicked: ', e);
         setCurrent(e.key);
+    };
+
+    // Toggle mobile menu
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
     };
 
     // Menu items
@@ -308,31 +312,87 @@ const Navbar = () => {
     ];
 
     return (
-        <header className=" sticky top-0 bg-white z-10 text-gray-600 body-font">
-            <div className="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
-                <Link to="/" className="w-80 flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <header className="sticky top-0 bg-white z-10 text-gray-600 shadow-md">
+            <div className="container mx-auto flex p-4 !items-center justify-between">
+                {/* Logo */}
+
+                <Link
+                    to="/"
+                    className="flex  flex-col sm:flex-row items-center text-gray-900 mb-4 xl:mb-0"
+                >
                     <img
                         className="w-10"
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Emblem_of_Uzbekistan.svg/2012px-Emblem_of_Uzbekistan.svg.png"
                         alt="Uzbekistan Emblem"
                     />
-                    <span className="ml-3 text-xl">O'zbekiston Respublikasi <span className='font-bold'>MILLIY ILMIY PORTALI</span></span>
+
+                    {/* Katta ekranlar uchun matn */}
+                    <span className="ml-3 text-xl w-72 hidden sm:block">
+                        O'zbekiston Respublikasi <br />
+                        <span className="font-bold"> MILLIY ILMIY PORTALI </span>
+                    </span>
+
+                    {/* Kichik ekranlar uchun matn */}
+                    <div className="ml-2 font-bold sm:hidden"> MILLIY ILMIY PORTALI </div>
                 </Link>
-                <div className="md:ml-4 w-[50%]">
-                    <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
+
+
+                {/* Menu (Desktop) */}
+                <div className=" mt-[-10px] w-[50%] hidden xl:block">
+                    <Menu
+                        onClick={onClick}
+                        selectedKeys={[current]}
+                        mode="horizontal"
+                        items={items}
+                    />
                 </div>
-                <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                    <Select defaultValue='uzbekistan' className='w-[100px]' name="" id="">
+
+                {/* Search and Language Select */}
+                <div className="flex items-center">
+                    <Select defaultValue="uzbekistan" className="w-[100px] hidden xl:block">
                         <Option value="uzbekistan">UZB</Option>
                         <Option value="rusia">RUS</Option>
                         <Option value="english">ENG</Option>
                         <Option value="arabic">ARABIC</Option>
                     </Select>
-                </nav>
-                <IoSearch className='text-xl ml-3'/>
-                <Button type='link' className="inline-flex !ml-1 items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-                    Войти <IoMdExit className='text-2xl' />
-                </Button>
+
+                    {/* Search Icon */}
+                    <IoSearch className="text-xl ml-3 hidden xl:block" />
+
+                    {/* Login Button */}
+                    <Button
+                        type="link"
+                        className="ml-3 hiddenxl:flex items-center bg-gray-100 py-1 px-3 rounded hover:bg-gray-200"
+                    >
+                        Войти <IoMdExit className="text-2xl ml-1" />
+                    </Button>
+
+                    {/* Hamburger Icon (Mobile) */}
+                    <button className="text-2xl xl:hidden ml-3" onClick={toggleMenu}>
+                        {menuOpen ? <CloseOutlined /> : <MenuOutlined />}
+                    </button>
+                </div>
+            </div>
+
+            {/* Mobile Menu */}
+            <div
+                className={`transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-[500px]" : "max-h-0"
+                    } bg-white xl:hidden`}
+            >
+                <Menu
+                    onClick={onClick}
+                    selectedKeys={[current]}
+                    mode="vertical"
+                    items={items}
+                />
+                <div className="p-4">
+                    <Select defaultValue="uzbekistan" className="w-full">
+                        <Option value="uzbekistan">UZB</Option>
+                        <Option value="rusia">RUS</Option>
+                        <Option value="english">ENG</Option>
+                        <Option value="arabic">ARABIC</Option>
+                    </Select>
+                </div>
             </div>
         </header>
     );
