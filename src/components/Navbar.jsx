@@ -313,15 +313,15 @@ const Navbar = () => {
 
     return (
         <header className="sticky top-0 bg-white z-10 text-gray-600 shadow-md">
-            <div className="container mx-auto flex p-4 !items-center justify-between">
+            <div className="container mx-auto flex p-2 !items-center justify-between">
                 {/* Logo */}
 
                 <Link
                     to="/"
-                    className="flex  flex-col sm:flex-row items-center text-gray-900 mb-4 xl:mb-0"
+                    className="flex  flex-col sm:flex-row items-start text-gray-900 xl:mb-0"
                 >
                     <img
-                        className="w-10"
+                        className="w-10 m-2"
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Emblem_of_Uzbekistan.svg/2012px-Emblem_of_Uzbekistan.svg.png"
                         alt="Uzbekistan Emblem"
                     />
@@ -333,12 +333,12 @@ const Navbar = () => {
                     </span>
 
                     {/* Kichik ekranlar uchun matn */}
-                    <div className="ml-2 font-bold sm:hidden"> MILLIY ILMIY PORTALI </div>
+                    <div className="ml-2 font-bold sm:hidden"> <p className="text-md"> MILLIY ILMIY PORTALI</p> </div>
                 </Link>
 
 
                 {/* Menu (Desktop) */}
-                <div className=" mt-[-10px] w-[50%] hidden xl:block">
+                <div className=" w-[50%] hidden xl:block">
                     <Menu
                         onClick={onClick}
                         selectedKeys={[current]}
@@ -348,13 +348,16 @@ const Navbar = () => {
                 </div>
 
                 {/* Search and Language Select */}
-                <div className="flex items-center">
-                    <Select defaultValue="uzbekistan" className="w-[100px] hidden xl:block">
-                        <Option value="uzbekistan">UZB</Option>
-                        <Option value="rusia">RUS</Option>
-                        <Option value="english">ENG</Option>
-                        <Option value="arabic">ARABIC</Option>
-                    </Select>
+                <div className="flex  items-center ">
+                    <div className="hidden md:block">
+                        <Select defaultValue="uzbekistan" className="w-[100px] hidden xl:block">
+                            <Option value="uzbekistan">UZB</Option>
+                            <Option value="rusia">RUS</Option>
+                            <Option value="english">ENG</Option>
+                            <Option value="arabic">ARABIC</Option>
+                        </Select>
+                    </div>
+
 
                     {/* Search Icon */}
                     <IoSearch className="text-xl ml-3 hidden xl:block" />
@@ -385,8 +388,8 @@ const Navbar = () => {
                     mode="vertical"
                     items={items}
                 />
-                <div className="p-4">
-                    <Select defaultValue="uzbekistan" className="w-full">
+                <div className=" !hidden p-4">
+                    <Select defaultValue="uzbekistan" className="w-full hidden">
                         <Option value="uzbekistan">UZB</Option>
                         <Option value="rusia">RUS</Option>
                         <Option value="english">ENG</Option>
