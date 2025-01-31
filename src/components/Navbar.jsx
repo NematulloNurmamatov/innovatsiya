@@ -349,7 +349,7 @@ const Navbar = () => {
 
                 {/* Search and Language Select */}
                 <div className="flex  items-center ">
-                    <div className="hidden md:block">
+                    <div className=" hidden md:block">
                         <Select defaultValue="uzbekistan" className="w-[100px] hidden xl:block">
                             <Option value="uzbekistan">UZB</Option>
                             <Option value="rusia">RUS</Option>
@@ -388,7 +388,7 @@ const Navbar = () => {
                     mode="vertical"
                     items={items}
                 />
-                <div className=" !hidden p-4">
+                <div className=" p-4">
                     <Select defaultValue="uzbekistan" className="w-full hidden">
                         <Option value="uzbekistan">UZB</Option>
                         <Option value="rusia">RUS</Option>
