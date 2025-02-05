@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Layout, Menu } from 'antd';
 import { sidebar_items } from '../../constants/sidebarItems';
 import { useNavigate } from 'react-router-dom';
+import '../../styles/scrollbar.css';
+
 
 
 const { Sider, Content } = Layout;
@@ -19,11 +21,11 @@ export default function Sidebar({ children }) {
 
 
     return (
-        <Layout style={{ minHeight: '100vh' }} className='lg:flex-col'>
+        <Layout style={{ minHeight: '100vh' }} className='lg:flex-col '>
             {/* Sidebar */}
             <Sider
                 width={299}
-                className="!site-layout-background !bg-white !pt-3  !custom-scrollbar"
+                className="!site-layout-background !bg-white !pt-3  !custom-scrollbar overflow-y-auto  custom-scroll"
                 style={{
                     height: '100vh', // Make the Sider fill the entire height of the screen
                     overflowY: 'auto', // Enable vertical scrolling

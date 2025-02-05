@@ -17,7 +17,7 @@ const Elonlar = () => {
                         <h3 className='!font-bold text-[20px] mb-2'>Vengriya Qishloq xo'jaligi va tabiiy fanlar universitetiga qisqa muddatli stajirovkalarga tanlov e'lon qilinadi</h3>
                         <p className='text-[15px] text-gray-800'>Innovatsion rivojlanish vazirligi 2021-yil 29-noyabr 2-dekabr kunlari Vengriya Respublikasiga amalga oshirilgan delegatsiya tashrifi davomida erishilgan kelishuv natijalariga muvofiq 25 nafar yosh olimlarni Vengriya Qishloq xo'jaligi va tabiiy fanlar universitetiga 1 oylik qisqa.</p>
                         <div className='flex flex-col sm:flex-row items-center sm:justify-between mt-4 gap-3'>
-                            <Button className="w-full sm:w-[45%] !border-1 !bg-gray-200 border-[#0099B5] text-[#0099B5] !text-[18px] !h-9" color="primary" variant="outlined">
+                            <Button className="w-full sm:w-[45%] !border-1 !bg-gray-100 border-[#0099B5] text-[#0099B5] !text-[18px] !h-9" color="primary" variant="outlined">
                                 Подробнее
                             </Button>
                             <p className='text-[16px] text-gray-600 flex items-center gap-2'><ClockCircleOutlined /> 12.02.2022</p>
@@ -30,7 +30,7 @@ const Elonlar = () => {
                         <h3 className='!font-bold text-[20px] mb-2'>Vengriya Qishloq xo'jaligi va tabiiy fanlar universitetiga qisqa muddatli stajirovkalarga tanlov e'lon qilinadi</h3>
                         <p className='text-[15px] text-gray-800'>Innovatsion rivojlanish vazirligi 2021-yil 29-noyabr 2-dekabr kunlari Vengriya Respublikasiga amalga oshirilgan delegatsiya tashrifi davomida erishilgan kelishuv natijalariga muvofiq 25 nafar yosh olimlarni Vengriya Qishloq xo'jaligi va tabiiy fanlar universitetiga 1 oylik qisqa.</p>
                         <div className='flex flex-col sm:flex-row items-center sm:justify-between mt-4 gap-3'>
-                            <Button className="w-full sm:w-[45%] !border-1 !bg-gray-200 border-[#0099B5] text-[#0099B5] !text-[18px] !h-9" color="primary" variant="outlined">
+                            <Button className="w-full sm:w-[45%] !border-1 !bg-gray-100 border-[#0099B5] text-[#0099B5] !text-[18px] !h-9" color="primary" variant="outlined">
                                 Подробнее
                             </Button>
                             <p className='text-[16px] text-gray-600 flex items-center gap-2'><ClockCircleOutlined /> 12.02.2022</p>
@@ -49,7 +49,7 @@ const Elonlar = () => {
                         Innovatsion rivojlanish vazirligi 2021-yil 29-noyabr 2-dekabr kunlari Vengriya Respublikasiga amalga oshirilgan delegatsiya tashrifi davomida erishilgan kelishuv natijalariga muvofiq 25 nafar yosh olimlarni Vengriya Qishloq xo'jaligi va tabiiy fanlar universitetiga
                     </p>
                     <div className="flex flex-col items-center !justify-between md:flex-row md:justify-start mt-6 gap-4">
-                        <Button className="w-full md:w-[40%] !border-1 !bg-gray-200 border-[#0099B5] text-[#0099B5] !text-[18px] !h-9" color="primary" variant="outlined">
+                        <Button className="w-full md:w-[40%] !border-1 !bg-gray-100 border-[#0099B5] text-[#0099B5] !text-[18px] !h-9" color="primary" variant="outlined">
                             Подробнее
                         </Button>
                         <p className="text-[16px] text-gray-600 flex items-center gap-2">

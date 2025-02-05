@@ -10,7 +10,7 @@ const { Option } = Select;
 
 const Navbar = () => {
     // State to handle menu selection
-    const [current, setCurrent] = useState("mail");
+    const [current, setCurrent] = useState("");
     const [menuOpen, setMenuOpen] = useState(false);
 
     // useNavigate hookini chaqirish
@@ -18,19 +18,9 @@ const Navbar = () => {
 
     // Handle menu item click
     const onClick = (e) => {
-        setCurrent(e.key);
+        console.log(e);
+        navigate(e?.key)
 
-        // if (e.key === "about") {
-        //     navigate("/about"); // Portal sahifasiga yo'naltirish
-        // }
-        // // boshqa key'lar uchun qo'shimcha yo'naltirishlar
-        // // else if (e.key === "home") {
-        //     navigate("/"); // About sahifasiga yo'naltirish
-        // }
-        // else if (e.key === "hujjatlar") {
-        //     navigate("/hujjatlar"); // Services sahifasiga yo'naltirish
-        // } e
-        // boshqa bo'limlar uchun qo'shimcha yo'naltirishlar
     };
 
     // Toggle mobile menu
@@ -40,11 +30,11 @@ const Navbar = () => {
     const items = [
         {
             label: <Link to="/">Home</Link>,
-            key: 'home',
+            key: '/',
             // icon: <MailOutlined />,
         },
         {
-            label:<Link to="/about">Portal haqida</Link>,
+            label: <Link to="/about">Portal haqida</Link>,
             key: 'about',
             // icon: <MailOutlined />,
 
@@ -59,11 +49,11 @@ const Navbar = () => {
                     children: [
                         {
                             label: 'Normativ- huquqiy hujjatlar',
-                            key: 'hujjatlar',
+                            key: 'papers',
                         },
                         {
                             label: 'Davlat dasturlari',
-                            key: 'setting:2',
+                            key: 'applications',
                         },
                         {
                             label: 'Davlat boshqaruv organlari',

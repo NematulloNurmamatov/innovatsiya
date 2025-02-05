@@ -16,3 +16,35 @@
     width: 100%;
     margin: auto;
 }
+
+/* Custom Tailwind Scrollbar */
+.custom-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    @apply bg-[#005464] rounded-md transition-all duration-300;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#007891];
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+} */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #005464;
+    border-radius:5px !important;
+    width: 3px !important;
+}

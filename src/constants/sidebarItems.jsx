@@ -17,29 +17,26 @@ export const sidebar_items = [
         type: 'group',
         label: 'Ilm-fan va innovatsiyalar sohasidagi davlat boshqaruvi',  // The title of the group
     },
-    {
-        label: 'Davlat boshqaruvi',
-        key: '/boshqaruv',
-    },
+
     {
         label: 'Normativ-huquqiy hujjatlar',
-        key: 'hujjatlar',
+        key: '/papers',
     },
     {
         label: 'Davlat dasturlari',
-        key: 'setting:2',
+        key: '/applications',
     },
     {
         label: 'Davlat boshqaruv organlari',
-        key: 'setting:3',
+        key: '/organizations',
     },
     {
         label: "Oliy ta'lim muassasalari",
-        key: 'setting:4',
+        key: '/Organization',
     },
     {
         label: 'Ilmiy-tadqiqot muassasalari',
-        key: 'setting:5',
+        key: '/Organizations2',
     },
     {
         label: 'Hududiy salohiyat',
