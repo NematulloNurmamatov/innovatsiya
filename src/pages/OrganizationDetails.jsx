@@ -29,7 +29,7 @@ const OrganizationDetails = () => {
     const [activeTab, setActiveTab] = useState('umumiy');
 
     return (
-        <div>
+        <div className='fullContainer'>
             <Sidebar>
                 <div className='grid grid-cols-12 gap-5'>
                     <div className='pt-4 col-span-9'>

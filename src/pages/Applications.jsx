@@ -21,27 +21,29 @@ const Applications = () => {
     }, []);
 
     return (
-        <Sidebar>
-            <div className='pt-4'>
-                <h1 className='!font-black text-2xl'>Davlat dasturlari</h1>
-                <div className='mt-4 space-y-3'>
-                    {programs.map((program, index) => (
-                        <div key={index} className='border border-gray-300 bg-white p-3 rounded-lg flex items-center justify-between'>
-                            <div className='flex items-center space-x-4'>
-                                <div className='bg-[#002E5D] text-white pt-2 px-8 rounded-lg text-center'>
-                                    <p className='text-lg font-bold !mb-1'>{program.year} <br /> <span className='font-light'>yil</span></p>
+        <div className='fullContainer'>
+            <Sidebar>
+                <div className='pt-4'>
+                    <h1 className='!font-black text-2xl'>Davlat dasturlari</h1>
+                    <div className='mt-4 space-y-3'>
+                        {programs.map((program, index) => (
+                            <div key={index} className='border border-gray-300 bg-white p-3 rounded-lg flex items-center justify-between'>
+                                <div className='flex items-center space-x-4'>
+                                    <div className='bg-[#002E5D] text-white pt-2 px-8 rounded-lg text-center'>
+                                        <p className='text-lg font-bold !mb-1'>{program.year} <br /> <span className='font-light'>yil</span></p>
+                                    </div>
+                                    <p className='text-lg font-semibold'>{program.title}</p>
                                 </div>
-                                <p className='text-lg font-semibold'>{program.title}</p>
+                                <div className='flex items-center'>
+                                    <VerticalAlignBottomOutlined className="text-lg border-2 border-[#005464] !text-[#005464] p-1 rounded-md hover:bg-[#005464] hover:!text-white transition duration-200 cursor-pointer" />
+                                    <ShareAltOutlined className="text-lg border-2 border-[#005464] !text-[#005464] p-1 rounded-md hover:bg-[#005464] hover:!text-white transition duration-200 cursor-pointer ml-3" />
+                                </div>
                             </div>
-                            <div className='flex items-center'>
-                                <VerticalAlignBottomOutlined className="text-lg border-2 border-[#005464] !text-[#005464] p-1 rounded-md hover:bg-[#005464] hover:!text-white transition duration-200 cursor-pointer" />
-                                <ShareAltOutlined className="text-lg border-2 border-[#005464] !text-[#005464] p-1 rounded-md hover:bg-[#005464] hover:!text-white transition duration-200 cursor-pointer ml-3" />
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </Sidebar>
+            </Sidebar>
+        </div>
     );
 };
 

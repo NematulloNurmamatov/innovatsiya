@@ -12,8 +12,8 @@ const university = {
     address: "Yakkasaroy tumani, Bobur ko‘chasi, 55-uy",
     website: "https://www.herzen.uz/",
     established: "2020-yil",
-    description: "Kadrlarga bo‘lgan ehtiyojni inobatga olib xalqaro ta’lim standartlariga mos yuqori malakali mutaxassislarni tayyorlash.",
-    rahbar: "https://ias.gov.uz//static/uploads/fd7d68fd-e1e0-497d-bb77-8084662589a6.webp",
+    description: "Tashkil topgan sana2017 yil 30 noyabr Tashkilotning maqsadiOʻzbekiston Respublikasini innovatsion va ilmiy- texnik rivojlantirish sohasida jamiyat va davlat hayotini har tomonlama rivojlantirishga, mamlakatning intellektual va    texnologik salohiyatini oshirishga qaratilgan yagona davlat siyosatini amalga oshiradi; Innovatsion faoliyatni uning samaradorligi indikatorlari asosida baholaydi, ilgʻor texnologiyalarni birinchi darajada joriy etish talab qilinadigan tegishli tarmoq va sohalarni rivojlantirishning asosiy yoʻnalishlarini belgilaydi; innovatsion gʻoyalar, ishlanmalar va texnologiyalarni joriy etish masalalari boʻyicha davlat boshqaruvi organlari, ilmiy - tadqiqot va axborot - tahlil muassasalari hamda boshqa tashkilotlarning faoliyatini muvofiqlashtiradi;",
+    rahbar: "https://ias.gov.uz//static/uploads/24e8decf-df2a-4251-91e2-eae54555b2a5.jpg",
     contingent: {
         faculties: 0,
         students: 0,
@@ -30,7 +30,7 @@ const university = {
             phone: "+998 73 545-55-55",
             email: "info@kokanduni.uz",
             website: "www.kokanduni.uz",
-            img: "https://example.com/kokanduni.jpg"
+            img: "https://ias.gov.uz//static/uploads/49c94c3a-7cce-40ef-967b-da633dd04031.jpg"
         },
         {
             name: "Jizzax Universiteti",
@@ -60,7 +60,7 @@ const OrganizationsDetails = () => {
     const [activeTab, setActiveTab] = useState('umumiy');
 
     return (
-        <div>
+        <div className='fullContainer'>
             <Sidebar>
                 <div className='grid grid-cols-12 gap-5'>
                     <div className='pt-4 col-span-9'>

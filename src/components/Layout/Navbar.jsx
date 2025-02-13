@@ -49,52 +49,52 @@ const Navbar = () => {
                     children: [
                         {
                             label: 'Normativ- huquqiy hujjatlar',
-                            key: 'papers',
+                            key: '/papers',
                         },
                         {
                             label: 'Davlat dasturlari',
-                            key: 'applications',
+                            key: '/applications',
                         },
                         {
                             label: 'Davlat boshqaruv organlari',
-                            key: 'setting:3',
+                            key: '/organizations',
                         },
                         {
                             label: "Oliy ta'lim muassasalari",
-                            key: 'setting:4',
+                            key: '/organization',
                         },
                         {
                             label: 'Ilmiy-tadqiqot muassasalari',
-                            key: 'setting:5',
+                            key: 'organizations2',
                         },
                         {
                             label: 'Hududiy salohiyat',
-                            key: 'setting:6',
+                            key: '/regions',
                         },
                     ],
                 },
             ],
         },
-        // {
-        //     label: 'Texnoparklar',
-        //     key: 'SubMenu2',
-        //     children: [
-        //         {
-        //             type: 'group',
-        //             label: 'Texnoparklar',
-        //             children: [
-        //                 {
-        //                     label: 'Texnoparklar',
-        //                     key: 'setting:7',
-        //                 },
-        //                 {
-        //                     label: 'Startup akseleratorlar',
-        //                     key: 'setting:8',
-        //                 },
-        //             ],
-        //         },
-        //     ],
-        // },
+        {
+            label: 'Texnoparklar',
+            key: 'SubMenu2',
+            children: [
+                {
+                    type: 'group',
+                    label: 'Texnoparklar',
+                    children: [
+                        {
+                            label: 'Texnoparklar',
+                            key: '/technos',
+                        },
+                        {
+                            label: 'Startup akseleratorlar',
+                            key: '/accelators',
+                        },
+                    ],
+                },
+            ],
+        },
         // {
         //     label: 'Noshirlik faoliyati',
         //     key: 'SubMenu8',
@@ -105,19 +105,19 @@ const Navbar = () => {
         //             children: [
         //                 {
         //                     label: "Mahalliy ma'lumotlar bazasi",
-        //                     key: 'setting:9',
+        //                     key: '/projects',
         //                 },
         //                 {
         //                     label: "Xorijiy ma'lumotlar bazasi",
-        //                     key: 'setting:10',
+        //                     key: '/disserts',
         //                 },
         //                 {
         //                     label: "Yo'riqnoma va qo'llanmalar",
-        //                     key: 'setting:11',
+        //                     key: '/blutten',
         //                 },
         //                 {
         //                     label: "Ko'p so'raladigan savollar",
-        //                     key: 'setting:12',
+        //                     key: '/datas',
         //                 },
         //                 {
         //                     label: "Yangiliklar",
@@ -179,146 +179,147 @@ const Navbar = () => {
         //         },
         //     ],
         // },
-        // {
-        //     label: 'axborot resurslari',
-        //     key: 'SubMenu3',
-        //     children: [
-        //         {
-        //             type: 'group',
-        //             label: 'Milliy ilmiy texnik axborot resurslari',
-        //             children: [
-        //                 {
-        //                     label: 'Loyihalar reestri',
-        //                     key: 'setting:27',
-        //                 },
-        //                 {
-        //                     label: 'Dissertatsiyalar reestri',
-        //                     key: 'setting:28',
-        //                 },
-        //                 {
-        //                     label: 'IMO byulletenlari',
-        //                     key: 'setting:29',
-        //                 },
-        //                 {
-        //                     label: "Tahliliy ma'lumotnomalar",
-        //                     key: 'setting:30',
-        //                 },
-        //             ],
-        //         },
-        //     ],
-        // },
-        // {
-        //     label: 'Xalqaro hamkorlik',
-        //     key: 'SubMenu4',
-        //     children: [
-        //         {
-        //             type: 'group',
-        //             label: 'Xalqaro hamkorlik',
-        //             children: [
-        //                 {
-        //                     label: 'Xalqaro tashkilotlar va moliya institutlari',
-        //                     key: 'setting:31',
-        //                 },
-        //                 {
-        //                     label: 'Xorijiy tashkilotlar bilan tuzilgan memorandumlar',
-        //                     key: 'setting:32',
-        //                 },
-        //             ],
-        //         },
-        //     ],
-        // },
-        // {
-        //     label: 'Doktorantura',
-        //     key: 'SubMenu5',
-        //     children: [
-        //         {
-        //             type: 'group',
-        //             label: 'Doktorantura',
-        //             children: [
-        //                 {
-        //                     label: 'Doktorantura haqida',
-        //                     key: 'setting:33',
-        //                 },
-        //                 {
-        //                     label: 'Normativ-huquqiy asos',
-        //                     key: 'setting:34',
-        //                 },
-        //                 {
-        //                     label: 'Qabul kvotalari',
-        //                     key: 'setting:35',
-        //                 },
-        //                 {
-        //                     label: "Yo'nalishlar bo’yicha ilmiy kengashlar",
-        //                     key: 'setting:36',
-        //                 },
-        //                 {
-        //                     label: 'Ixtisoslik shifrlari',
-        //                     key: 'setting:37',
-        //                 },
-        //                 {
-        //                     label: 'Ro`yxatga olish jarayoni',
-        //                     key: 'setting:38',
-        //                 },
-        //             ],
-        //         },
-        //     ],
-        // },
-        // {
-        //     label: 'Grantlar',
-        //     key: 'SubMenu6',
-        //     children: [
-        //         {
-        //             type: 'group',
-        //             label: 'Xalqaro grantlar dasturi',
-        //             children: [
-        //                 {
-        //                     label: 'Erasmus+',
-        //                     key: 'setting:39',
-        //                 },
-        //                 {
-        //                     label: 'Horizon Europe',
-        //                     key: 'setting:40',
-        //                 },
-        //             ],
-        //         },
-        //     ],
-        // },
-        // {
-        //     label: 'Stajirovka',
-        //     key: 'SubMenu7',
-        //     children: [
-        //         {
-        //             type: 'group',
-        //             label: 'Ilmiy stajirovka',
-        //             children: [
-        //                 {
-        //                     label: 'Ilmiy stajirovka haqida',
-        //                     key: 'setting:41',
-        //                 },
-        //                 {
-        //                     label: 'Normativ-huquqiy asos',
-        //                     key: 'setting:42',
-        //                 },
-        //                 {
-        //                     label: "Ilmiy stajirovka bo'yicha qo'llanma",
-        //                     key: 'setting:43',
-        //                 },
-        //                 {
-        //                     label: "Hujjatlar ro'yxati",
-        //                     key: 'setting:44',
-        //                 },
-        //                 {
-        //                     label: "Ilmiy-stajirovkada amaliyot o'tab kelganlar",
-        //                     key: 'setting:45',
-        //                 },
-        //                 {
-        //                     label: 'Hududiy salohiyat',
-        //                     key: 'setting:46',
-        //                 },
-        //             ],
-        //         },
-        //     ],
-        // },
+        {
+            label: 'axborot resurslari',
+            key: 'SubMenu3',
+            children: [
+                {
+                    type: 'group',
+                    label: 'Milliy ilmiy texnik axborot resurslari',
+                    children: [
+                        {
+                            label: 'Loyihalar reestri',
+                            key: '/projects',
+                        },
+                        {
+                            label: 'Dissertatsiyalar reestri',
+                            key: '/disserts',
+                        },
+                        {
+                            label: 'IMO byulletenlari',
+                            key: '/blutten',
+                        },
+                        {
+                            label: "Tahliliy ma'lumotnomalar",
+                        key: '/datas',
+                            key: '/datas',
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            label: 'Xalqaro hamkorlik',
+            key: 'SubMenu4',
+            children: [
+                {
+                    type: 'group',
+                    label: 'Xalqaro hamkorlik',
+                    children: [
+                        {
+                            label: 'Xalqaro tashkilotlar va moliya institutlari',
+                            key: '/outinst',
+                        },
+                        {
+                            label: 'Xorijiy tashkilotlar bilan tuzilgan memorandumlar',
+                            key: '/memoriandums',
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            label: 'Doktorantura',
+            key: 'SubMenu5',
+            children: [
+                {
+                    type: 'group',
+                    label: 'Doktorantura',
+                    children: [
+                        {
+                            label: 'Doktorantura haqida',
+                            key: '/doktorantura',
+                        },
+                        {
+                            label: 'Normativ-huquqiy asos',
+                            key: '/rules',
+                        },
+                        {
+                            label: 'Qabul kvotalari',
+                            key: '/quotes',
+                        },
+                        {
+                            label: "Yo'nalishlar bo’yicha ilmiy kengashlar",
+                            key: '/directions',
+                        },
+                        {
+                            label: 'Ixtisoslik shifrlari',
+                            key: '/codes',
+                        },
+                        {
+                            label: 'Ro`yxatga olish jarayoni',
+                            key: '/register',
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            label: 'Grantlar',
+            key: 'SubMenu6',
+            children: [
+                {
+                    type: 'group',
+                    label: 'Xalqaro grantlar dasturi',
+                    children: [
+                        {
+                            label: 'Erasmus+',
+                            key: 'setting:39',
+                        },
+                        {
+                            label: 'Horizon Europe',
+                            key: 'setting:40',
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            label: 'Stajirovka',
+            key: 'SubMenu7',
+            children: [
+                {
+                    type: 'group',
+                    label: 'Ilmiy stajirovka',
+                    children: [
+                        {
+                            label: 'Ilmiy stajirovka haqida',
+                            key: 'setting:41',
+                        },
+                        {
+                            label: 'Normativ-huquqiy asos',
+                            key: 'setting:42',
+                        },
+                        {
+                            label: "Ilmiy stajirovka bo'yicha qo'llanma",
+                            key: 'setting:43',
+                        },
+                        {
+                            label: "Hujjatlar ro'yxati",
+                            key: 'setting:44',
+                        },
+                        {
+                            label: "Ilmiy-stajirovkada amaliyot o'tab kelganlar",
+                            key: 'setting:45',
+                        },
+                        {
+                            label: 'Hududiy salohiyat',
+                            key: 'setting:46',
+                        },
+                    ],
+                },
+            ],
+        },
     ];
 
     return (

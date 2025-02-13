@@ -92,53 +92,55 @@ const Organizations2 = () => {
     const filteredOrganizations = items.filter(org => org.region === activeRegion);
 
     return (
-        <Sidebar>
-            <div className='pt-4'>
-                <h1 className='!font-black text-2xl'>Ilmiy-tadqiqot muassasalari</h1>
+        <div className='fullContainer'>
+            <Sidebar>
+                <div className='pt-4'>
+                    <h1 className='!font-black text-2xl'>Ilmiy-tadqiqot muassasalari</h1>
 
-                {/* Viloyatlar bo'yicha filter */}
-                <div className='mt-4 flex gap-2 flex-wrap space-x-2'>
-                    {regions.map(region => (
-                        <button
-                            key={region}
-                            className={`px-4 py-2 border border-gray-400 rounded-md cursor-pointer ${activeRegion === region ? 'bg-blue-600 !text-white' : 'bg-white'}`}
-                            onClick={() => setActiveRegion(region)}
-                        >
-                            {region}
-                        </button>
-                    ))}
-                </div>
+                    {/* Viloyatlar bo'yicha filter */}
+                    <div className='mt-4 flex gap-2 flex-wrap space-x-2'>
+                        {regions.map(region => (
+                            <button
+                                key={region}
+                                className={`px-4 py-2 border border-gray-400 rounded-md cursor-pointer ${activeRegion === region ? 'bg-blue-600 !text-white' : 'bg-white'}`}
+                                onClick={() => setActiveRegion(region)}
+                            >
+                                {region}
+                            </button>
+                        ))}
+                    </div>
 
-                <p className="!mt-4 text-gray-600">Tashkilotlar: {filteredOrganizations.length}</p>
+                    <p className="!mt-4 text-gray-600">Tashkilotlar: {filteredOrganizations.length}</p>
 
-                <div className='mt-4 space-y-4'>
-                    {filteredOrganizations.length > 0 ? (
-                        filteredOrganizations.map((org, index) => (
-                            <div className='border border-gray-400 bg-white p-4 rounded-lg flex items-end justify-between'>
-                                <div key={index} className=' flex items-center space-x-4'>
-                                    <img src={org.img} alt={org.name} className=' w-42 h-32 object-cover rounded-md' />
-                                    <div className='flex-1'>
-                                        <h2 className='text-lg font-semibold'>{org.name}</h2>
-                                        <p><strong>Hudud:</strong> {org.region}</p>          
-                                        <p><strong>Tashkilot turi:</strong> {org.type}</p>   
-                                        <p><strong>Manzil:</strong> {org.address}</p>        
-                                        <p><strong>Indeks:</strong> {org.index}</p>          
-                                        <p><strong>Telefon:</strong> {org.phone}</p>         
-                                        <p><strong>E-Mail:</strong> {org.email}</p>          
-                                        <p><strong>Veb-sayt:</strong> {org.website}</p>       
+                    <div className='mt-4 space-y-4'>
+                        {filteredOrganizations.length > 0 ? (
+                            filteredOrganizations.map((org, index) => (
+                                <div className='border border-gray-400 bg-white p-4 rounded-lg flex items-end justify-between'>
+                                    <div key={index} className=' flex items-center space-x-4'>
+                                        <img src={org.img} alt={org.name} className=' w-42 h-32 object-cover rounded-md' />
+                                        <div className='flex-1'>
+                                            <h2 className='text-lg font-semibold'>{org.name}</h2>
+                                            <p><strong>Hudud:</strong> {org.region}</p>
+                                            <p><strong>Tashkilot turi:</strong> {org.type}</p>
+                                            <p><strong>Manzil:</strong> {org.address}</p>
+                                            <p><strong>Indeks:</strong> {org.index}</p>
+                                            <p><strong>Telefon:</strong> {org.phone}</p>
+                                            <p><strong>E-Mail:</strong> {org.email}</p>
+                                            <p><strong>Veb-sayt:</strong> {org.website}</p>
+                                        </div>
                                     </div>
+                                    <Link to={`/organization-details2/${org.id}`}>
+                                        <Button type='primary' className='text-end'>Batafsil</Button>
+                                    </Link>
                                 </div>
-                                <Link to={`/organization-details/${org.id}`}>
-                                    <Button type='primary' className='text-end'>Batafsil</Button>
-                                </Link>
-                            </div>
-                        ))
-                    ) : (
-                        <p className="text-gray-500">Bu hududda oliy ta'lim muassasalari topilmadi.</p>
-                    )}
+                            ))
+                        ) : (
+                            <p className="text-gray-500">Bu hududda oliy ta'lim muassasalari topilmadi.</p>
+                        )}
+                    </div>
                 </div>
-            </div>
-        </Sidebar>
+            </Sidebar>
+        </div>
     );
 };
 
