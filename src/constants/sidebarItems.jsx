@@ -17,7 +17,6 @@ export const sidebar_items = [
         type: 'group',
         label: 'Ilm-fan va innovatsiyalar sohasidagi davlat boshqaruvi',  // The title of the group
     },
-
     {
         label: 'Normativ-huquqiy hujjatlar',
         key: '/papers',
@@ -156,11 +155,11 @@ export const sidebar_items = [
                 children: [
                     {
                         label: 'Erasmus+',
-                        key: 'setting:39',
+                        key: '/erasmus',
                     },
                     {
                         label: 'Horizon Europe',
-                        key: 'setting:40',
+                        key: '/horizon',
                     },
                 ],
             },
@@ -176,7 +175,7 @@ export const sidebar_items = [
                 children: [
                     {
                         label: 'Ilmiy stajirovka haqida',
-                        key: 'setting:41',
+                        key: '/ilmiy-stajirovka',
                     },
                     {
                         label: 'Normativ-huquqiy asos',

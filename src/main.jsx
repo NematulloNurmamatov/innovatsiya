@@ -31,6 +31,11 @@ import Quotes from './pages/Quotes';
 import Directions from './pages/Directions';
 import Codes from './pages/Codes';
 import Register from './pages/Register';
+import OutinstDetails from './pages/OutinstDetails';
+import ScienceCouncils from './pages/ScienceCouncils';
+import Erasmus from './pages/Erasmus';
+import Horizon from './pages/Horizon';
+import IlmiyStajirovka from './pages/IlmiyStajirovka';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -60,7 +65,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/directions" element={<Directions />} />
           <Route path="/codes" element={<Codes />} />
           <Route path="/register" element={<Register />} />
-
+          <Route path="/scienceCouncils" element={<ScienceCouncils />} />
+          <Route path="/erasmus" element={<Erasmus />} />
+          <Route path="/horizon" element={<Horizon />} />
+          <Route path="/ilmiy-stajirovka" element={<IlmiyStajirovka />} />
 
 
 
@@ -69,7 +77,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/organizations-details/:id" element={<OrganizationsDetails />} />
           <Route path="/technos-details/:id" element={<TechnosDetails />} />
           <Route path="/accelators-details/:id" element={<AccelatorsDetails />} />
-          
+          <Route path="/outinst-details/:id" element={<OutinstDetails />} />
+
 
           <Route path='*' element={<h1>Error page 404</h1>} />
         </Route>

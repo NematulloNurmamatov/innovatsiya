@@ -274,11 +274,11 @@ const Navbar = () => {
                     children: [
                         {
                             label: 'Erasmus+',
-                            key: 'setting:39',
+                            key: '/erasmus',
                         },
                         {
                             label: 'Horizon Europe',
-                            key: 'setting:40',
+                            key: '/horizon',
                         },
                     ],
                 },
@@ -294,7 +294,7 @@ const Navbar = () => {
                     children: [
                         {
                             label: 'Ilmiy stajirovka haqida',
-                            key: 'setting:41',
+                            key: '/ilmiy-stajirovka',
                         },
                         {
                             label: 'Normativ-huquqiy asos',

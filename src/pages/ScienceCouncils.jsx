@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Sidebar from '../components/Layout/Sidebar';
-import { Select } from 'antd';
 
 const data = {
     'Aniq va tabiiy fanlar': [
@@ -18,30 +17,26 @@ const data = {
     ]
 };
 
-export default function Directions() {
+export default function ScienceCouncils() {
     const [selectedCategory, setSelectedCategory] = useState('Aniq va tabiiy fanlar');
-
-    // Select komponenti uchun variantlarni tayyorlash
-    const options = Object.keys(data).map(category => ({
-        value: category,
-        label: category
-    }));
 
     return (
         <div className='fullContainer'>
             <Sidebar>
                 <div className='py-10 px-6'>
                     <h2 className='text-2xl font-bold mb-6'>Yo'nalishlar bo'yicha ilmiy kengashlar</h2>
-                    <Select
-                        className="w-full !mb-10"
+                    <select
+                        className='border p-2 mb-6'
                         value={selectedCategory}
-                        onChange={(value) => setSelectedCategory(value)}
-                        options={options}
-                    />
-
-                    <table className='w-full '>
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                    >
+                        {Object.keys(data).map((category) => (
+                            <option key={category} value={category}>{category}</option>
+                        ))}
+                    </select>
+                    <table className='w-full border-collapse border border-gray-300'>
                         <thead>
-                            <tr className='!bg-gray-200'>
+                            <tr className='bg-gray-200'>
                                 <th className='border p-2'>Ixtisoslik shifri</th>
                                 <th className='border p-2'>Ilmiy kengash</th>
                                 <th className='border p-2'>IK raisi</th>
@@ -49,7 +44,7 @@ export default function Directions() {
                         </thead>
                         <tbody>
                             {data[selectedCategory].map((item) => (
-                                <tr key={item.id} className='hover:bg-gray-100 bg-white'>
+                                <tr key={item.id} className='hover:bg-gray-100'>
                                     <td className='border p-2'>{item.code}</td>
                                     <td className='border p-2'>{item.name}</td>
                                     <td className='border p-2'>{item.chairman}</td>
