@@ -20,6 +20,7 @@ const Navbar = () => {
     const onClick = (e) => {
         console.log(e);
         navigate(e?.key)
+        setMenuOpen(!menuOpen)
 
     };
 

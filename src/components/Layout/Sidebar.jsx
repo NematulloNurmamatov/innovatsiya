@@ -9,7 +9,7 @@ const { Sider, Content } = Layout;
 export default function Sidebar({ children }) {
     const navigate = useNavigate();
     const [current, setCurrent] = useState('sub1');
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
