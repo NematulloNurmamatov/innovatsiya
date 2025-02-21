@@ -67,10 +67,10 @@ export default function Outinst() {
         <div className='fullContainer'>
             <Sidebar>
                 <div className='py-10 px-6'>
-                    <h2 className='text-2xl font-bold mb-6'>Xalqaro tashkilotlar va moliya institutlari</h2>
+                    <h2 className='text-2xl !font-bold mb-6'>Xalqaro tashkilotlar va moliya institutlari</h2>
 
                     {/* Xalqaro moliya institutlari */}
-                    <h2 className='text-xl font-semibold mb-6'>Xalqaro moliya institutlari</h2>
+                    <h2 className='text-xl !font-semibold mb-6'>Xalqaro moliya institutlari</h2>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10'>
                         {banks.map((bank) => (
                             <div key={bank.id} className='relative border border-gray-300 shadow-md rounded-lg p-6 bg-white'>
@@ -96,7 +96,7 @@ export default function Outinst() {
                     </div>
 
                     {/* Xalqaro tashkilotlar */}
-                    <h2 className='text-xl mb-6'>Xalqaro tashkilotlar</h2>
+                    <h2 className='text-xl !font-semibold mb-6'>Xalqaro tashkilotlar</h2>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                         {banks.map((bank) => (
                             <div key={bank.id} className='border border-gray-300 relative shadow-md rounded-lg p-6 bg-white'>

@@ -179,23 +179,19 @@ export const sidebar_items = [
                     },
                     {
                         label: 'Normativ-huquqiy asos',
-                        key: 'setting:42',
+                        key: '/scientist',
                     },
                     {
                         label: "Ilmiy stajirovka bo'yicha qo'llanma",
-                        key: 'setting:43',
+                        key: '/stajirovka-qollanma',
                     },
                     {
                         label: "Hujjatlar ro'yxati",
-                        key: 'setting:44',
+                        key: '/stajirovka-docs',
                     },
                     {
                         label: "Ilmiy-stajirovkada amaliyot o'tab kelganlar",
-                        key: 'setting:45',
-                    },
-                    {
-                        label: 'Hududiy salohiyat',
-                        key: 'setting:46',
+                        key: '/stajirovka-sent',
                     },
                 ],
             },
@@ -211,75 +207,75 @@ export const sidebar_items = [
                 children: [
                     {
                         label: "Mahalliy ma'lumotlar bazasi",
-                        key: 'setting:9',
+                        key: '/articles',
                     },
                     {
                         label: "Xorijiy ma'lumotlar bazasi",
-                        key: 'setting:10',
+                        key: '/outbases',
                     },
                     {
                         label: "Yo'riqnoma va qo'llanmalar",
-                        key: 'setting:11',
+                        key: '/docs',
                     },
                     {
                         label: "Ko'p so'raladigan savollar",
-                        key: 'setting:12',
+                        key: '/faq',
                     },
                     {
                         label: "Yangiliklar",
-                        key: 'setting:13',
+                        key: '/news',
                     },
                     {
                         label: "E'lonlar",
-                        key: 'setting:14',
+                        key: '/adverts',
                     },
                     {
                         label: "Loyihalar turlari",
-                        key: 'setting:15',
+                        key: '/concs',
                     },
                     {
                         label: "Konferensiyalar",
-                        key: 'setting:16',
+                        key: '/conference',
                     },
                     {
                         label: "Innovatsion rivojlanish vazirligi Hay'ati yig'ilishlari",
-                        key: 'setting:17',
+                        key: '/hayat',
                     },
                     {
                         label: "Innovatsion rivojlanish vazirligi Ilmiy-texnik kengash yig'ilishlari",
-                        key: 'setting:18',
+                        key: '/itk',
                     },
                     {
                         label: "Innovatsion g'oyalar ma'lumotlar bazasi",
-                        key: 'setting:19',
+                        key: '/ideas',
                     },
                     {
                         label: "Davlat tomonidan qo'llab-quvvatlash chora-tadbirlari",
-                        key: 'setting:20',
+                        key: '/helps',
                     },
                     {
                         label: "Tadbirlar",
-                        key: 'setting:21',
+                        key: '/events',
                     },
                     {
                         label: "Muvaffaqiyat tarixi",
-                        key: 'setting:21',
+                        key: '/historys',
                     },
                     {
                         label: "Dayjest va tahliliy ma'lumotnoma",
-                        key: 'setting:23',
+                        key: '/dayjeyts',
                     },
                     {
                         label: "Fotogalereya",
-                        key: 'setting:24',
+                        key: '/gallery/photo',
                     },
                     {
                         label: "Videogalereya",
-                        key: 'setting:25',
+                        key: '/gallery/video',
                     },
                     {
                         label: "Ko'p beriladigan savollar",
-                        key: 'setting:26',
+                        key: '/faq2',
                     },
                 ],
             },

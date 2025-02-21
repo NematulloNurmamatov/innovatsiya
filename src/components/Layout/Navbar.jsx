@@ -95,90 +95,6 @@ const Navbar = () => {
                 },
             ],
         },
-        // {
-        //     label: 'Noshirlik faoliyati',
-        //     key: 'SubMenu8',
-        //     children: [
-        //         {
-        //             type: 'group',
-        //             label: 'Noshirlik faoliyati',
-        //             children: [
-        //                 {
-        //                     label: "Mahalliy ma'lumotlar bazasi",
-        //                     key: '/projects',
-        //                 },
-        //                 {
-        //                     label: "Xorijiy ma'lumotlar bazasi",
-        //                     key: '/disserts',
-        //                 },
-        //                 {
-        //                     label: "Yo'riqnoma va qo'llanmalar",
-        //                     key: '/blutten',
-        //                 },
-        //                 {
-        //                     label: "Ko'p so'raladigan savollar",
-        //                     key: '/datas',
-        //                 },
-        //                 {
-        //                     label: "Yangiliklar",
-        //                     key: 'setting:13',
-        //                 },
-        //                 {
-        //                     label: "E'lonlar",
-        //                     key: 'setting:14',
-        //                 },
-        //                 {
-        //                     label: "Loyihalar turlari",
-        //                     key: 'setting:15',
-        //                 },
-        //                 {
-        //                     label: "Konferensiyalar",
-        //                     key: 'setting:16',
-        //                 },
-        //                 {
-        //                     label: "Innovatsion rivojlanish vazirligi Hay'ati yig'ilishlari",
-        //                     key: 'setting:17',
-        //                 },
-        //                 {
-        //                     label: "Innovatsion rivojlanish vazirligi Ilmiy-texnik kengash yig'ilishlari",
-        //                     key: 'setting:18',
-        //                 },
-        //                 {
-        //                     label: "Innovatsion g'oyalar ma'lumotlar bazasi",
-        //                     key: 'setting:19',
-        //                 },
-        //                 {
-        //                     label: "Davlat tomonidan qo'llab-quvvatlash chora-tadbirlari",
-        //                     key: 'setting:20',
-        //                 },
-        //                 {
-        //                     label: "Tadbirlar",
-        //                     key: 'setting:21',
-        //                 },
-        //                 {
-        //                     label: "Muvaffaqiyat tarixi",
-        //                     key: 'setting:21',
-        //                 },
-        //                 {
-        //                     label: "Dayjest va tahliliy ma'lumotnoma",
-        //                     key: 'setting:23',
-        //                 },
-        //                 {
-        //                     label: "Fotogalereya",
-        //                     key: 'setting:24',
-        //                 },
-        //                 {
-        //                     label: "Videogalereya",
-        //                     key: 'setting:25',
-        //                 },
-        //                 {
-        //                     label: "Ko'p beriladigan savollar",
-        //                     key: 'setting:26',
-        //                 },
-        //             ],
-        //         },
-        //     ],
-        // },
         {
             label: 'axborot resurslari',
             key: 'SubMenu3',
@@ -201,7 +117,7 @@ const Navbar = () => {
                         },
                         {
                             label: "Tahliliy ma'lumotnomalar",
-                        key: '/datas',
+                            key: '/datas',
                             key: '/datas',
                         },
                     ],
@@ -298,23 +214,103 @@ const Navbar = () => {
                         },
                         {
                             label: 'Normativ-huquqiy asos',
-                            key: 'setting:42',
+                            key: '/scientist',
                         },
                         {
                             label: "Ilmiy stajirovka bo'yicha qo'llanma",
-                            key: 'setting:43',
+                            key: '/stajirovka-qollanma',
                         },
                         {
                             label: "Hujjatlar ro'yxati",
-                            key: 'setting:44',
+                            key: '/stajirovka-docs',
                         },
                         {
                             label: "Ilmiy-stajirovkada amaliyot o'tab kelganlar",
-                            key: 'setting:45',
+                            key: '/stajirovka-sent',
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            label: 'Noshirlik faoliyati',
+            key: 'SubMenu8',
+            children: [
+                {
+                    type: 'group',
+                    label: 'Noshirlik faoliyati',
+                    children: [
+                        {
+                            label: "Mahalliy ma'lumotlar bazasi",
+                            key: '/articles',
                         },
                         {
-                            label: 'Hududiy salohiyat',
-                            key: 'setting:46',
+                            label: "Xorijiy ma'lumotlar bazasi",
+                            key: '/outbases',
+                        },
+                        {
+                            label: "Yo'riqnoma va qo'llanmalar",
+                            key: '/docs',
+                        },
+                        {
+                            label: "Ko'p so'raladigan savollar",
+                            key: '/faq',
+                        },
+                        {
+                            label: "Yangiliklar",
+                            key: '/news',
+                        },
+                        {
+                            label: "E'lonlar",
+                            key: '/adverts',
+                        },
+                        {
+                            label: "Loyihalar turlari",
+                            key: '/concs',
+                        },
+                        {
+                            label: "Konferensiyalar",
+                            key: '/conference',
+                        },
+                        {
+                            label: "Innovatsion rivojlanish vazirligi Hay'ati yig'ilishlari",
+                            key: '/hayat',
+                        },
+                        {
+                            label: "Innovatsion rivojlanish vazirligi Ilmiy-texnik kengash yig'ilishlari",
+                            key: '/itk',
+                        },
+                        {
+                            label: "Innovatsion g'oyalar ma'lumotlar bazasi",
+                            key: '/ideas',
+                        },
+                        {
+                            label: "Davlat tomonidan qo'llab-quvvatlash chora-tadbirlari",
+                            key: '/helps',
+                        },
+                        {
+                            label: "Tadbirlar",
+                            key: '/events',
+                        },
+                        {
+                            label: "Muvaffaqiyat tarixi",
+                            key: '/historys',
+                        },
+                        {
+                            label: "Dayjest va tahliliy ma'lumotnoma",
+                            key: '/dayjeyts',
+                        },
+                        {
+                            label: "Fotogalereya",
+                            key: '/gallery/photo',
+                        },
+                        {
+                            label: "Videogalereya",
+                            key: '/gallery/video',
+                        },
+                        {
+                            label: "Ko'p beriladigan savollar",
+                            key: '/faq2',
                         },
                     ],
                 },

@@ -65,32 +65,32 @@ const Footer = () => {
                     <div>
                         <div className='mt-10 flex flex-col text-white gap-2'>
                             <h3 className='!font-bold '>Doktorantura</h3>
-                            <Link className='text-[14px]'>Doktorantura haqida</Link>
-                            <Link className='text-[14px]'>Normativ-huquqiy asos</Link>
-                            <Link className='text-[14px]'>Qabul kvotalari</Link>
-                            <Link className='text-[14px]'>Yo'nalishlar bo yicha ilmiy </Link>
-                            <Link className='text-[14px]'>Kengashlar</Link>
-                            <Link className='text-[14px]'>Ixtisoslik shifrlari</Link>
-                            <Link className='text-[14px]'>Ro yxatga olish jarayoni</Link>
+                            <Link to={'/doktorantura'} className='text-[14px]'>Doktorantura haqida</Link>
+                            <Link to={'/rules'} className='text-[14px]'>Normativ-huquqiy asos</Link>
+                            <Link to={'/quotes'} className='text-[14px]'>Qabul kvotalari</Link>
+                            <Link to={'/directions'} className='text-[14px]'>Yo'nalishlar bo yicha ilmiy </Link>
+                            <Link to={'/codes'} className='text-[14px]'>Kengashlar</Link>
+                            <Link to={'/codes'} className='text-[14px]'>Ixtisoslik shifrlari</Link>
+                            <Link to={'/register'} className='text-[14px]'>Ro yxatga olish jarayoni</Link>
                         </div>
                         <div className='text-white mt-4 flex flex-col gap-2'>
                             <h3 className='!font-bold'>Xalqaro grantlar dasturi</h3>
-                            <Link className='text-[14px]'>Startup akseleratorlar</Link>
-                            <Link className='text-[14px]'>Erasmus+</Link>
-                            <Link className='text-[14px]'>Horizon Europe</Link>
+                            <Link to={'/erasmus'} className='text-[14px]'>Startup akseleratorlar</Link>
+                            <Link to={'/erasmus'} className='text-[14px]'>Erasmus+</Link>
+                            <Link to={'/horizon'} className='text-[14px]'>Horizon Europe</Link>
                         </div>
                     </div>
                     <div>
                         <div className='mt-10 flex flex-col text-white gap-2'>
                             <h3 className='!font-bold '>Ilmiy stajirovka</h3>
-                            <Link className='text-[14px]'>Ilmiy stajirovka haqida</Link>
-                            <Link className='text-[14px]'>Normativ-huquqiy asos</Link>
-                            <Link className='text-[14px]'>Ilmiy stajirovka bo'yicha </Link>
-                            <Link className='text-[14px]'>Qo'llanma </Link>
-                            <Link className='text-[14px]'>Hujjatlar na'munalari</Link>
-                            <Link className='text-[14px]'>Hujjatlar ro'yxati</Link>
-                            <Link className='text-[14px]'>Ilmiy-stajirovkada amaliyot </Link>
-                            <Link className='text-[14px]'>o'tab kelganlar</Link>
+                            <Link to={'/ilmiy-stajirovka'} className='text-[14px]'>Ilmiy stajirovka haqida</Link>
+                            <Link to={'/scientist'} className='text-[14px]'>Normativ-huquqiy asos</Link>
+                            <Link to={'/stajirovka-qollanma'} className='text-[14px]'>Ilmiy stajirovka bo'yicha </Link>
+                            <Link to={'/stajirovka-docs'} className='text-[14px]'>Qo'llanma </Link>
+                            <Link to={'/stajirovka-docs'} className='text-[14px]'>Hujjatlar na'munalari</Link>
+                            <Link to={'/stajirovka-docs'} className='text-[14px]'>Hujjatlar ro'yxati</Link>
+                            <Link to={'/stajirovka-sent'} className='text-[14px]'>Ilmiy-stajirovkada amaliyot </Link>
+                            <Link to={'/stajirovka-sent'} className='text-[14px]'>o'tab kelganlar</Link>
                         </div>
                     </div>
                     <div>
