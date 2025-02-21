@@ -63,6 +63,9 @@ import NewsDetail from './pages/NewsDetail';
 import ConcsDetails from './pages/ConcsDetails';
 import HayatDetails from './pages/HayatDetails';
 import ItkDetails from './pages/ItkDetails';
+import IdeasDetails from './pages/IdeasDetails';
+import EventsDetails from './pages/EventsDetails';
+import HistorysDetails from './pages/HistorysDetails';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -133,6 +136,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/concs-detail/:id" element={<ConcsDetails />} />
           <Route path="/hayat-detail/:id" element={<HayatDetails />} />
           <Route path="/itk-details/:id" element={<ItkDetails />} />
+          <Route path="/ideas-details/:id" element={<IdeasDetails />} />
+          <Route path="/events-details/:id" element={<EventsDetails />} />
+          <Route path="/historys-details/:id" element={<HistorysDetails />} />
 
 
 

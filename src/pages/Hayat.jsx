@@ -12,7 +12,7 @@ const Hayat = () => {
     const newsData = [
         {
             id: 1,
-            title: "Ilmiy loyihalar monitoringi o'tkazilmoqda",
+            title: "Ilm-fan va innovatsiyalar kengashining yigirmanchi yig‘ilishi o‘z ishini boshladi.",
             date: "2024-12-17",
             views: 84,
             description: "Ilmiy faoliyatga oid davlat dasturlari doirasida amalga oshirilayotgan loyihalar monitoringi...",
@@ -68,7 +68,7 @@ const Hayat = () => {
         <div className="fullContainer">
             <Sidebar>
                 <div className="pt-12 container">
-                    <h1 className="!font-black text-2xl mb-6">Yangiliklar</h1>
+                    <h1 className="!font-black text-2xl mb-6">Hay'ati yig'ilishlari</h1>
 
                     {/* Qidiruv tizimi */}
                     <div className="flex flex-wrap gap-4 mb-4">
