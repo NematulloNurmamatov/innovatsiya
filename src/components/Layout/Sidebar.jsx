@@ -40,7 +40,7 @@ export default function Sidebar({ children }) {
             {/* Sidebar */}
             <Sider
                 width={299}
-                className={`!site-layout-background !bg-white !pt-16 !custom-scrollbar overflow-y-auto flex-col transition-transform duration-300  ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`!site-layout-background !bg-white !pt-10 !custom-scrollbar overflow-y-auto flex-col transition-transform duration-300  ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
                     } fixed md:static`}
                 style={{
                     height: '100vh',
