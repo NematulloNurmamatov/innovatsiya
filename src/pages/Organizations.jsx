@@ -115,17 +115,22 @@ const Organizations = () => {
             <Sidebar>
                 <div className='pt-4'>
                     <h1 className='!font-black text-2xl'>Davlat boshqaruv organlari</h1>
-                    <div className='mt-4 flex gap-4 space-x-2'>
+                    <div className="mt-4 flex flex-wrap gap-3">
                         {['Vazirlik', 'Qo\'mita', 'Agentlik', 'Akademiya', 'Aksiyadorlik jamiyati', 'Assotsiatsiya'].map(tab => (
                             <button
                                 key={tab}
-                                className={`px-4 py-2 border border-gray-400 rounded-md ${activeTab === tab ? 'bg-blue-600 !text-white' : 'bg-white'}`}
+                                className={`px-5 py-2 cursor-pointer rounded-lg font-medium border transition-all duration-300 shadow
+                ${activeTab === tab
+                                        ? 'bg-blue-600 !text-white border-blue-600 shadow-md scale-105'
+                                        : 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-blue-500 hover:!text-white hover:border-blue-500'}
+            `}
                                 onClick={() => setActiveTab(tab)}
                             >
                                 {tab}
                             </button>
                         ))}
                     </div>
+
 
                     <div className='mt-4 space-y-4'>
                         {filteredOrganizations.length > 0 ? (

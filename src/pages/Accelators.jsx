@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Sidebar from '../components/Layout/Sidebar';
 import { Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
@@ -28,12 +28,19 @@ const item = [
 
 
 export default function Technos() {
+    
+
+
     const navigate = useNavigate()
 
     const HandleData = (id) => {
         console.log('ishladi');
         navigate(`/accelators-details/${id}`)
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="fullContainer bg-gradient-to-b from-blue-50 to-white min-h-screen">

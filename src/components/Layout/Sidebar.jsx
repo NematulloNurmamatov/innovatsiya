@@ -32,16 +32,17 @@ export default function Sidebar({ children }) {
     }, []);
 
     const onClick = (e) => {
-        navigate(e?.key);
+        // setCurrent(e.key); // Aktiv menyuni yangilash
+        navigate(e.key);
     };
+
 
     return (
         <Layout style={{ minHeight: '100vh' }}>
             {/* Sidebar */}
             <Sider
-                width={299}
-                className={`!site-layout-background !bg-white !pt-10 !custom-scrollbar overflow-y-auto flex-col transition-transform duration-300  ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-                    } fixed md:static`}
+                width={269}
+                className={`!site-layout-background !bg-white !pt-10 !custom-scrollbar overflow-y-auto flex-col transition-none ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} fixed md:static`}
                 style={{
                     height: '100vh',
                     overflowY: 'auto',
@@ -50,6 +51,7 @@ export default function Sidebar({ children }) {
                     zIndex: 10,
                 }}
             >
+
                 <button
                     onClick={toggleSidebar}
                     className="absolute !top-4 right-4 md:hidden bg-gray-200 p-2 rounded-md"
@@ -62,11 +64,14 @@ export default function Sidebar({ children }) {
                     selectedKeys={[current]}
                     mode="inline"
                     items={sidebar_items}
+                    motion={false}
                 />
+
+
             </Sider>
 
             {/* Content Area */}
-            <Layout style={{ padding: '0 24px 24px' }} 
+            <Layout style={{ padding: '0 24px 24px' }}
                 className='max-[767px]:ml-[-300px]'
             >
                 <Content

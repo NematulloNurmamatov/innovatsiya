@@ -89,8 +89,29 @@ const OrganizationsDetails = () => {
                                         <h2 className="text-xl font-semibold">Umumiy ma'lumot</h2>
                                         <p>Hudud: {university.location}</p>
                                         <p>Tashkilot turi: {university.type}</p>
-                                        <p>Manzil: {university.address}</p>
-                                        <p>Veb-sayt: <a href={university.website} className="text-blue-500">{university.website}</a></p>
+                                        <p>
+                                            Manzil:{" "}
+                                            <a
+                                                href={`https://www.google.com/maps/search/${encodeURIComponent(university.address)}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-500 hover:underline"
+                                            >
+                                                {university.address}
+                                            </a>
+                                        </p>
+                                        <p>
+                                            Veb-sayt:{" "}
+                                            <a
+                                                href={university.website}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-500 hover:underline"
+                                            >
+                                                {university.website}
+                                            </a>
+                                        </p>
+
                                     </div>
                                 </div>
                             </div>
@@ -130,8 +151,27 @@ const OrganizationsDetails = () => {
                                             <p>Hudud: {otm.location}</p>
                                             <p>Manzil: {otm.address}</p>
                                             <p>Telefon: {otm.phone}</p>
-                                            <p>Email: {otm.email}</p>
-                                            <p>Veb-sayt: <a href={otm.website} className="text-blue-500">{otm.website}</a></p>
+                                            <p>
+                                                Email:{" "}
+                                                <a
+                                                    href={`mailto:${otm.email}`}
+                                                    className="text-blue-500 hover:underline"
+                                                >
+                                                    {otm.email}
+                                                </a>
+                                            </p>
+                                            <p>
+                                                Veb-sayt:{" "}
+                                                <a
+                                                    href={otm.website}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-blue-500 hover:underline"
+                                                >
+                                                    {otm.website}
+                                                </a>
+                                            </p>
+
                                         </div>
                                     </div>
                                 ))}
@@ -148,7 +188,15 @@ const OrganizationsDetails = () => {
                                             <p>Hudud: {itm.location}</p>
                                             <p>Manzil: {itm.address}</p>
                                             <p>Telefon: {itm.phone}</p>
-                                            <p>Email: {itm.email}</p>
+                                            <p>
+                                                Email:{" "}
+                                                <a
+                                                    href={`mailto:${itm.email}`}
+                                                    className="text-blue-500 hover:underline"
+                                                >
+                                                    {itm.email}
+                                                </a>
+                                            </p>
                                             <p>Veb-sayt: <a href={itm.website} className="text-blue-500">{itm.website}</a></p>
                                         </div>
                                     </div>

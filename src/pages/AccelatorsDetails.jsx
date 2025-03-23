@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Sidebar from '../components/Layout/Sidebar';
 
@@ -53,6 +53,10 @@ export default function AccelatorsDetails() {
     if (!techno) {
         return <div className="text-center text-red-500 text-xl">Texnopark topilmadi!</div>;
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className='fullContainer'>

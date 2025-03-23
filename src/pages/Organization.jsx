@@ -38,7 +38,7 @@ const items = [
     {
         id: 3,
         name: "AL-BUKHARI universiteti",
-        region: "Toshkent shahar",
+        region: "Buxoro viloyati",
         type: "Universitet",
         address: "Toshkent shahar, Shoh Rustaveli ko‘chasi, 154A-uy",
         index: "-",
@@ -53,7 +53,9 @@ const Organization = () => {
     const [activeRegion, setActiveRegion] = useState('Toshkent shahar');
 
     // 🔥 **Filtrlash**
-    const filteredOrganizations = items.filter(org => org.region === activeRegion);
+    const filteredOrganizations = items.filter(org =>
+        activeRegion === "Barchasi" || org.region === activeRegion
+    );
 
     return (
         <div className='fullContainer'>
@@ -62,11 +64,18 @@ const Organization = () => {
                     <h1 className='!font-black text-2xl'>Oliy ta'lim muassasalari</h1>
 
                     {/* Viloyatlar bo'yicha filter */}
-                    <div className='mt-4 flex gap-2 flex-wrap space-x-2'>
+                    <div className='mt-4 flex gap-2 flex-wrap'>
+                        <button
+                            className={`px-4 py-2 border border-gray-400 rounded-md cursor-pointer ${activeRegion === 'Barchasi' ? 'bg-blue-600 !text-white !border-gray-100' : 'bg-white'}`}
+                            onClick={() => setActiveRegion('Barchasi')} // ❗ Bu yerda bo'sh string o'rniga 'Barchasi' qo'ydik
+                        >
+                            Barchasi
+                        </button>
+
                         {regions.map(region => (
                             <button
                                 key={region}
-                                className={`px-4 py-2 border border-gray-400 rounded-md cursor-pointer ${activeRegion === region ? 'bg-blue-600 !text-white' : 'bg-white'}`}
+                                className={`px-4 py-2 border border-gray-400 rounded-md cursor-pointer ${activeRegion === region ? 'bg-blue-600 !text-white !border-gray-100' : 'bg-white'}`}
                                 onClick={() => setActiveRegion(region)}
                             >
                                 {region}
@@ -74,13 +83,14 @@ const Organization = () => {
                         ))}
                     </div>
 
+
                     <p className="!mt-4 text-gray-600">Tashkilotlar: {filteredOrganizations.length}</p>
 
                     <div className='mt-4 space-y-4'>
                         {filteredOrganizations.length > 0 ? (
                             filteredOrganizations.map((org, index) => (
                                 <div className='border border-gray-400 bg-white p-4 rounded-lg flex items-end justify-between'>
-                                    <div key={index} className=' flex items-center space-x-4'>
+                                    <div key={index} className=' flex items-center space-x-4 max-[888px]:flex-col'>
                                         <img src={org.img} alt={org.name} className=' w-42 h-32 object-cover rounded-md' />
                                         <div className='flex-1'>
                                             <h2 className='text-lg font-semibold'>{org.name}</h2>

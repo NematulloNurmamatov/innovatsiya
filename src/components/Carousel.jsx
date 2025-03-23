@@ -1,15 +1,15 @@
 import React from 'react';
-import { Carousel as AntdCarousel } from 'antd'; // Ant Design carouselni import qilamiz
-import 'antd/dist/reset.css'; // Ant Designning default stilini import qilamiz
-import '../styles/carousel.css'; // Yangi CSS faylini import qilamiz
-import bir from '../assets/carousel_img/1.jpg'; // Rasmni import qilamiz
-import ikki from '../assets/carousel_img/2.jpg'; // Rasmni import qilamiz
-import uch from '../assets/carousel_img/3.jpg'; // Rasmni import qilamiz
-import tort from '../assets/carousel_img/4.jpeg'; // Rasmni import qilamiz
-import besh from '../assets/carousel_img/5.jpg'; // Rasmni import qilamiz
-import mountain from '../assets/carousel_img/mountain.jpg'; // Rasmni import qilamiz
-import mountain2 from '../assets/carousel_img/mountain2.jpg'; // Rasmni import qilamiz
-import mountain3 from '../assets/carousel_img/mountain3.jpg'; // Rasmni import qilamiz
+import { Carousel as AntdCarousel } from 'antd'; 
+import 'antd/dist/reset.css'; 
+import '../styles/carousel.css'; 
+import bir from '../assets/carousel_img/1.jpg'; 
+import ikki from '../assets/carousel_img/2.jpg';
+import uch from '../assets/carousel_img/3.jpg'; 
+import tort from '../assets/carousel_img/4.jpeg';
+import besh from '../assets/carousel_img/5.jpg';
+import mountain from '../assets/carousel_img/mountain.jpg';
+import mountain2 from '../assets/carousel_img/mountain2.jpg'; 
+import mountain3 from '../assets/carousel_img/mountain3.jpg'; 
 
 
 

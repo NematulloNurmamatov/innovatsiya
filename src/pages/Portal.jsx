@@ -1,9 +1,15 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { sidebar_items } from '../constants/sidebarItems';
+import { useEffect } from "react";
 import Sidebar from '../components/Layout/Sidebar';
 
 const Portal = () => {
+
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
 
 
