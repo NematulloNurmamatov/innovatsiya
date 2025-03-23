@@ -71,7 +71,7 @@ export default function Sidebar({ children }) {
             </Sider>
 
             {/* Content Area */}
-            <Layout style={{ padding: '0 24px 24px' }}
+            <Layout style={{ padding: '0 54px 54px' }}
                 className='max-[767px]:ml-[-300px]'
             >
                 <Content
