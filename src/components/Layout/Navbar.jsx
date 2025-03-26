@@ -99,13 +99,12 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             <div
-                className={`transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-[500px]" : "max-h-0"
+                className={`transition-all overflow-y-scroll duration-300   overflow-hidden ${menuOpen ? "!h-[85vh]" : "max-h-0"
                     } bg-white`}
             >
-                <div className="!w-[100%] columns-5 gap-4">
-                    <Menu onClick={onClickMobile} selectedKeys={[current]} mode="vertical" items={menuItems2} />
+                <div className="!w-[100%]  columns-5  max-[980px]:columns-4 max-[800px]:columns-3 max-[620px]:columns-2 max-[480px]:columns-1">
+                    <Menu onClick={onClickMobile} className="" selectedKeys={[current]} mode="vertical" items={menuItems2} />
                 </div>
-
 
                 <div className=" w-[40%] p-4">
                     <Select defaultValue="uzbekistan" className="w-full hidden">

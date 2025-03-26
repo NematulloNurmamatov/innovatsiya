@@ -74,13 +74,13 @@ const Voqealar = () => {
                 </div>
 
                 {/* Event List */}
-                <div className=" w-[80%] mx-auto grid md:w-[70%] lg:w-[90%] lg:grid-cols-2 gap-5 mt-4">
+                <div className=" w-[100%] mx-auto grid md:w-[70%] lg:w-[90%] lg:grid-cols-2 gap-5 mt-4">
                     {events.map((event) => (
-                        <div key={event.id} className="flex flex-col lg:flex-row bg-white shadow-lg rounded-lg overflow-hidden">
+                        <div key={event.id} className="flex lg:flex-row bg-white shadow-lg max-[600px]:flex-col rounded-lg overflow-hidden">
                             <img
                                 src={event.image}
                                 alt="Event"
-                                className="w-full lg:w-1/3 object-cover"
+                                className="w-[200px] max-[600px]:w-full lg:w-1/3 object-cover"
                             />
                             <div className="p-4 w-full">
                                 <h3 className="font-bold text-lg">{event.title}</h3>

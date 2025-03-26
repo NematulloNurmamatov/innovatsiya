@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { Layout, Menu } from 'antd';
 import { sidebar_items } from '../../constants/sidebarItems';
 import { useNavigate } from 'react-router-dom';
@@ -6,10 +6,10 @@ import '../../styles/scrollbar.css';
 
 const { Sider, Content } = Layout;
 
-export default function Sidebar({ children }) {
+export default memo(function Sidebar({ children }) {
     const navigate = useNavigate();
     const [current, setCurrent] = useState('sub1');
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -66,13 +66,11 @@ export default function Sidebar({ children }) {
                     items={sidebar_items}
                     motion={false}
                 />
-
-
             </Sider>
 
             {/* Content Area */}
-            <Layout style={{ padding: '0 54px 54px' }}
-                className='max-[767px]:ml-[-300px]'
+            <Layout style={{ padding: '0 24px 24px' }}
+                className='max-[767px]:ml-[-270px]'
             >
                 <Content
                     style={{
@@ -92,4 +90,4 @@ export default function Sidebar({ children }) {
             </Layout>
         </Layout>
     );
-}
+})

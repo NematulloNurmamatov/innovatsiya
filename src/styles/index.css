@@ -2,7 +2,6 @@
 
 @theme {
     --primary: #000000;
-
 }
 
 .container {
@@ -45,6 +44,8 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #005464;
-    border-radius:5px !important;
+    border-radius: 5px !important;
     width: 3px !important;
 }
+
+

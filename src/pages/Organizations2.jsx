@@ -102,7 +102,7 @@ const Organizations2 = () => {
                         {regions.map(region => (
                             <button
                                 key={region}
-                                className={`px-4 py-2 border border-gray-400 rounded-md cursor-pointer ${activeRegion === region ? 'bg-blue-600 !text-white' : 'bg-white'}`}
+                                className={`px-4 py-2 border border-gray-200 rounded-md cursor-pointer ${activeRegion === region ? 'bg-blue-600 !text-white' : 'bg-white'}`}
                                 onClick={() => setActiveRegion(region)}
                             >
                                 {region}
@@ -115,7 +115,7 @@ const Organizations2 = () => {
                     <div className='mt-4 space-y-4'>
                         {filteredOrganizations.length > 0 ? (
                             filteredOrganizations.map((org, index) => (
-                                <div className='border border-gray-400 bg-white p-4 rounded-lg flex items-end justify-between'>
+                                <div className='border border-gray-200 shadow-md bg-white p-4 rounded-lg flex items-end justify-between'>
                                     <div key={index} className=' flex items-center space-x-4'>
                                         <img src={org.img} alt={org.name} className=' w-42 h-32 object-cover rounded-md' />
                                         <div className='flex-1'>

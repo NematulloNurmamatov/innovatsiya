@@ -9,7 +9,7 @@
     filter: brightness(50%);
 }
 
-.ant-carousel .slick-prev, 
+.ant-carousel .slick-prev,
 .ant-carousel .slick-next {
     font-size: 36px;
     width: 40px;
@@ -22,13 +22,18 @@
     justify-content: center;
 }
 
-.ant-carousel .slick-prev:hover, 
+.ant-carousel .slick-prev:hover,
 .ant-carousel .slick-next:hover {
     font-size: 40px;
 }
 
-.ant-carousel .slick-prev { left: 50px; }
-.ant-carousel .slick-next { right: 50px; }
+.ant-carousel .slick-prev {
+    left: 50px;
+}
+
+.ant-carousel .slick-next {
+    right: 50px;
+}
 
 .ant-carousel .slick-prev::after,
 .ant-carousel .slick-next::after {
@@ -38,8 +43,8 @@
 }
 
 /* Matnlarni rasm ichida markazlashtirish */
-.ant-carousel h3, 
-.ant-carousel p, 
+.ant-carousel h3,
+.ant-carousel p,
 .ant-carousel .button {
     position: absolute;
     text-align: start;
@@ -100,15 +105,20 @@
     transition: background-color 0.3s;
 }
 
-.ant-carousel .slick-dots li.slick-active button, 
+.ant-carousel .slick-dots li.slick-active button,
 .ant-carousel .slick-dots li button:hover {
     background-color: rgba(255, 255, 255, 1);
 }
 
 /* Responsiv dizayn */
 @media (max-width: 1024px) {
-    .ant-carousel h3 { top: 15%; }
-    .ant-carousel p { top: 35%; }
+    .ant-carousel h3 {
+        top: 15%;
+    }
+
+    .ant-carousel p {
+        top: 35%;
+    }
 }
 
 @media (max-width: 868px) {
@@ -117,22 +127,86 @@
         width: 80%;
         top: 20%;
     }
+
     .ant-carousel p {
         font-size: 14px;
         width: 80%;
     }
-    .ant-carousel .button { font-size: 13px; }
+
+    .ant-carousel .button {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 680px) {
-    .ant-carousel p { top: 40%; }
-    .ant-carousel .button { top: 70%; }
-    .ant-carousel .slick-prev { left: 30px; }
-    .ant-carousel .slick-next { right: 30px; }
+    .ant-carousel p {
+        top: 40%;
+    }
+
+    .ant-carousel .button {
+        top: 70%;
+    }
+
+    .ant-carousel .slick-prev {
+        left: 30px;
+    }
+
+    .ant-carousel .slick-next {
+        right: 30px;
+    }
+
+    .ant-carousel h3 {
+        font-weight: 800;
+        font-size: 24px;
+        top: 25%;
+        left: 9%;
+    }
+
+    .ant-carousel p {
+        font-size: 16px;
+        margin-top: 10px;
+        top: 41%;
+        left: 9%;
+    }
+
+    .ant-carousel .button {
+        top: 60%;
+        left: 9%;
+    }
+}
+
+
+@media (max-width: 610px) {
+    .ant-carousel h3 {
+        font-weight: 800;
+        font-size: 20px;
+        top: 26%;
+        left: 9%;
+    }
+
+    .ant-carousel p {
+        font-size: 14px;
+        margin-top: 10px;
+        top: 41%;
+        left: 9%;
+    }
+
+    .ant-carousel .button {
+        top: 60%;
+        left: 9%;
+    }
 }
 
 @media (max-width: 480px) {
-    .ant-carousel h3 { font-size: 16px; }
-    .ant-carousel p { font-size: 12px; }
-    .ant-carousel .button { font-size: 10px; }
+    .ant-carousel h3 {
+        font-size: 16px;
+    }
+
+    .ant-carousel p {
+        font-size: 12px;
+    }
+
+    .ant-carousel .button {
+        font-size: 10px;
+    }
 }

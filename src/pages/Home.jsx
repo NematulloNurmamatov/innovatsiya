@@ -3,9 +3,10 @@ import Carousel from '../components/Carousel'
 import Yangiliklar from '../components/home/Yangiliklar'
 import Elonlar from '../components/home/elenlar/Elonlar'
 import Voqealar from '../components/home/Voqealar/Voqealar'
-import Navigator from '../components/home/Navigator/Navigator'
+// import Navigator from '../components/home/Navigator/Navigator'
 import Olimlar from '../components/home/Olimlar/Olimlar'
 import '../styles/index.css'
+import UzbMap from '../components/home/Navigator/UzbMap'
 
 const Home = () => {
     return (
@@ -14,7 +15,10 @@ const Home = () => {
             <Yangiliklar />
             <Elonlar />
             <Voqealar />
-            <Navigator />
+            {/* <Navigator /> */}
+            < UzbMap onSelectedRegion={(val) => {
+                console.log(val);
+            }} />
             <Olimlar />
         </div>
     )

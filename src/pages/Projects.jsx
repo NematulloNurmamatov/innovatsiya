@@ -73,7 +73,6 @@ const Projects = () => {
         (searchTerm.leader ? doc.leader.toLowerCase().includes(searchTerm.leader.toLowerCase()) : true))
     );
 
-    // Tozalash funksiyasi
     const clearFilters = () => {
         setSearchTerm({
             title: "",
@@ -91,14 +90,15 @@ const Projects = () => {
     return (
         <div className='fullContainer'>
             <Sidebar>
-                <div className='pt-12 container'>
+                <div className='pt-4 container '>
                     <h1 className='!font-black text-2xl'>Loyihalar reestri</h1>
 
-                    <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div className="grid grid-cols-3 max-[770px]:grid-cols-2 gap-4 mb-4">
                         {/* Hujjat nomi */}
                         <div>
-                            <label>Hujjat nomi:</label>
+                            <label className='text-[12px]  text-cyan-900'>Hujjat nomi:</label>
                             <Input
+                                className='!mt-1'
                                 placeholder="Hujjat nomi"
                                 value={searchTerm.title}
                                 onChange={(e) => setSearchTerm({ ...searchTerm, title: e.target.value })}
@@ -107,8 +107,9 @@ const Projects = () => {
 
                         {/* Tashkilot */}
                         <div>
-                            <label>Tashkilot:</label>
+                            <label className='text-[12px]  text-cyan-900'>Tashkilot:</label>
                             <Input
+                                className='!mt-1'
                                 placeholder="Tashkilot"
                                 value={searchTerm.organization}
                                 onChange={(e) => setSearchTerm({ ...searchTerm, organization: e.target.value })}
@@ -117,8 +118,9 @@ const Projects = () => {
 
                         {/* Hujjat raqami */}
                         <div>
-                            <label>Hujjat raqami:</label>
+                            <label className='text-[12px]  text-cyan-900'>Hujjat raqami:</label>
                             <Input
+                                className='!mt-1'
                                 placeholder="Hujjat raqami"
                                 value={searchTerm.number}
                                 onChange={(e) => setSearchTerm({ ...searchTerm, number: e.target.value })}
@@ -127,8 +129,9 @@ const Projects = () => {
 
                         {/* Hujjat turi */}
                         <div>
-                            <label>Hujjat turi:</label>
+                            <label className='text-[12px]  text-cyan-900'>Hujjat turi:</label>
                             <Select
+                                className='!mt-1'
                                 placeholder="Hujjat turi"
                                 value={searchTerm.type}
                                 onChange={(value) => setSearchTerm({ ...searchTerm, type: value })}
@@ -142,8 +145,9 @@ const Projects = () => {
 
                         {/* Davomiyligi */}
                         <div>
-                            <label>Davomiyligi:</label>
+                            <label className='text-[12px]  text-cyan-900'>Davomiyligi:</label>
                             <Input
+                                className='!mt-1'
                                 placeholder="Davomiyligi"
                                 value={searchTerm.duration}
                                 onChange={(e) => setSearchTerm({ ...searchTerm, duration: e.target.value })}
@@ -152,8 +156,9 @@ const Projects = () => {
 
                         {/* Boshlanish sanasi */}
                         <div>
-                            <label>Boshlanish sanasi:</label>
+                            <label className='text-[12px]  text-cyan-900'>Boshlanish sanasi:</label>
                             <Input
+                                className='!mt-1'
                                 placeholder="Boshlanish sanasi"
                                 value={searchTerm.startDate}
                                 onChange={(e) => setSearchTerm({ ...searchTerm, startDate: e.target.value })}
@@ -162,8 +167,9 @@ const Projects = () => {
 
                         {/* Tugash sanasi */}
                         <div>
-                            <label>Tugash sanasi:</label>
+                            <label className='text-[12px]  text-cyan-900'>Tugash sanasi:</label>
                             <Input
+                                className='!mt-1'
                                 placeholder="Tugash sanasi"
                                 value={searchTerm.endDate}
                                 onChange={(e) => setSearchTerm({ ...searchTerm, endDate: e.target.value })}
@@ -172,8 +178,9 @@ const Projects = () => {
 
                         {/* Yo'nalishi */}
                         <div>
-                            <label>Yo'nalishi:</label>
+                            <label className='text-[12px]  text-cyan-900'>Yo'nalishi:</label>
                             <Input
+                                className='!mt-1'
                                 placeholder="Yo'nalishi"
                                 value={searchTerm.field}
                                 onChange={(e) => setSearchTerm({ ...searchTerm, field: e.target.value })}
@@ -182,8 +189,9 @@ const Projects = () => {
 
                         {/* Rahbar */}
                         <div>
-                            <label>Rahbar:</label>
+                            <label className='text-[12px]  text-cyan-900'>Rahbar:</label>
                             <Input
+                                className='!mt-1'
                                 placeholder="Rahbar"
                                 value={searchTerm.leader}
                                 onChange={(e) => setSearchTerm({ ...searchTerm, leader: e.target.value })}

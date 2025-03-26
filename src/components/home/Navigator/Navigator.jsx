@@ -1,22 +1,20 @@
 import React from "react";
 
-import UzbekistanMap from "../../../assets/uz.svg"; // SVG xaritani alohida komponentda saqlaymiz
+import UzbekistanMap from "../../../assets/uz.svg";
 
 const Navigator = () => {
 
     return (
         <div className="container p-4">
-            <h2 className="!font-bold text-3xl w-full text-center lg:text-left">
+            <h2 className="!font-bold text-3xl max-[700px]:text-2xl max-[600px]:text-xl  w-full text-center lg:text-left">
                 O'zbekiston Respublikasi Ilmiy va innovatsion infratuzilmasi bo'yicha navigator
             </h2>
 
             <div className="flex flex-col lg:flex-row gap-8 mt-6">
-                {/* Xarita qismi (rasm) */}
                 <div className="w-full lg:w-[70%]">
                     <img className="w-full object-cover rounded-xl" src={UzbekistanMap} alt="uzb" />
                 </div>
 
-                {/* Ma'lumot qutisi */}
                 <div className="w-full lg:w-[30%] bg-gray-100 p-6 rounded-xl">
                     <h3 className="text-center lg:text-left text-2xl !font-bold mb-5">Tashkent</h3>
 
@@ -32,9 +30,9 @@ const Navigator = () => {
                         ["Kichik iqtisodiy zonalar", 13],
                         ["Ilmiy laboratoriyalar", 7]
                     ].map(([name, count], index) => (
-                        <div key={index} className="flex justify-between text-gray-700 text-lg py-1 border-b border-gray-300">
-                            <p>{name}</p>
-                            <p>{count}</p>
+                        <div key={index} className="flex justify-between text-gray-700 text-lg pt-2 border-b border-gray-300">
+                            <p className="max-[600px]:text-[14px]">{name}</p>
+                            <p className="max-[600px]:text-[14px]">{count}</p>
                         </div>
                     ))}
                 </div>
