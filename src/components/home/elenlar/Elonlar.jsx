@@ -33,8 +33,8 @@ const Elonlar = () => {
                     <div key={news.id} className='bg-gray-100 rounded-2xl overflow-hidden shadow-lg'>
                         <img className='w-full h-64 object-cover' src={news.image} alt={news.title} />
                         <div className='p-5'>
-                            <h3 className='text-xl max-[600px]:text-lg font-bold mb-2'>{news.title}</h3>
-                            <p className='text-gray-700 max-[600px]:text-[14px]'>{news.description}</p>
+                            <h3 className='text-xl max-[600px]:!text-[16px] font-bold mb-2'>{news.title}</h3>
+                            <p className='text-gray-700 max-[600px]:text-[13px] leading-6 max-[600px]:leading-4'>{news.description}</p>
                             <div className='flex flex-col sm:flex-row items-center sm:justify-between mt-4 gap-3'>
                                 <Button className='w-full sm:w-auto border border-[#0099B5] text-[#0099B5]' size='large'>Подробнее</Button>
                                 <p className='text-gray-600 flex items-center gap-2'><ClockCircleOutlined /> {news.date}</p>
@@ -42,20 +42,6 @@ const Elonlar = () => {
                         </div>
                     </div>
                 ))}
-            </div>
-
-            <div className='flex flex-col lg:flex-row items-center gap-6 bg-gray-100 rounded-2xl mt-12 p-6'>
-                <div className='w-full lg:w-1/2 text-center lg:text-left'>
-                    <h3 className='text-2xl font-bold'>{newsData[0].title}</h3>
-                    <p className='text-gray-600 mt-4'>{newsData[0].description}</p>
-                    <div className='flex flex-col md:flex-row items-center md:justify-start mt-6 gap-4'>
-                        <Button className='w-full md:w-auto border border-[#0099B5] text-[#0099B5]' size='large'>Подробнее</Button>
-                        <p className='text-gray-600 flex items-center gap-2'><ClockCircleOutlined /> {newsData[0].date}</p>
-                    </div>
-                </div>
-                <div className='w-full lg:w-1/2'>
-                    <img className='rounded-2xl w-full object-cover' src='https://zira.uz/wp-content/uploads/2017/03/glavnaya-ziry.png' alt='Vengriya universiteti' />
-                </div>
             </div>
         </div>
     );
