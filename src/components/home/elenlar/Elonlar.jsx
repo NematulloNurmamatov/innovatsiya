@@ -43,6 +43,20 @@ const Elonlar = () => {
                     </div>
                 ))}
             </div>
+
+            <div className='flex flex-col md:flex-row-reverse items-center gap-6 bg-gray-100 rounded-2xl mt-12 p-6'>
+                <div className='w-full lg:w-1/2'>
+                    <img className='rounded-2xl w-full object-cover' src='https://zira.uz/wp-content/uploads/2017/03/glavnaya-ziry.png' alt='Vengriya universiteti' />
+                </div>
+                <div className='w-full lg:w-1/2  lg:text-left'>
+                    <h3 className='text-2xl max-[900px]:text-[20px] max-[600px]:!text-14px font-bold'>{newsData[0].title}</h3>
+                    <p className='text-gray-600 max-[900px]:text-[14px] mt-4'>{newsData[0].description}</p>
+                    <div className='flex flex-col md:flex-row items-center md:justify-start mt-6 gap-4'>
+                        <Button className='w-full md:w-auto border border-[#0099B5] text-[#0099B5]' size='large'>Подробнее</Button>
+                        <p className='text-gray-600 flex items-center gap-2'><ClockCircleOutlined /> {newsData[0].date}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
