@@ -3,6 +3,7 @@ import { Layout, Menu } from 'antd';
 import { sidebar_items } from '../../constants/sidebarItems';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/scrollbar.css';
+import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 
 const { Sider, Content } = Layout;
 
@@ -54,9 +55,9 @@ export default memo(function Sidebar({ children }) {
 
                 <button
                     onClick={toggleSidebar}
-                    className="absolute !top-4 right-4 md:hidden bg-gray-200 p-2 rounded-md"
+                    className="absolute !top-4 right-4 md:hidden bg-gray-200 p-1 rounded-md"
                 >
-                    {isSidebarOpen ? '✖' : '☰'}
+                    {isSidebarOpen ? <CloseOutlined /> : '☰'}
                 </button>
 
                 <Menu
@@ -81,9 +82,9 @@ export default memo(function Sidebar({ children }) {
                 >
                     <button
                         onClick={toggleSidebar}
-                        className="md:hidden bg-gray-200 !mt-4 rounded-md mb-4 z-40"
+                        className="md:hidden !mt-4 rounded-md mb-4 z-40"
                     >
-                        {isSidebarOpen ? '✖' : '☰'}
+                        {isSidebarOpen ? '✖' : <MenuOutlined />}
                     </button>
                     {children}
                 </Content>

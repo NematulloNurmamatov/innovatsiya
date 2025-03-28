@@ -43,7 +43,7 @@ export default function NewsDetail() {
     return (
         <div className="">
             <Sidebar>
-                <div className='py-10'>
+                <div className='py-6'>
                     <button
                         onClick={() => navigate(-1)} // Orqaga qaytish
                         className="!mb-4 px-4 py-2 bg-blue-500 !text-white rounded hover:bg-blue-600"
