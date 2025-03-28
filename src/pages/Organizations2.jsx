@@ -115,9 +115,9 @@ const Organizations2 = () => {
                     <div className='mt-4 space-y-4'>
                         {filteredOrganizations.length > 0 ? (
                             filteredOrganizations.map((org, index) => (
-                                <div className='border border-gray-200 shadow-md bg-white p-4 rounded-lg flex items-end justify-between'>
-                                    <div key={index} className=' flex items-center space-x-4'>
-                                        <img src={org.img} alt={org.name} className=' w-42 h-32 object-cover rounded-md' />
+                                <div className='border border-gray-200 shadow-md bg-white p-4 rounded-lg flex items-end justify-between max-[600px]:flex-col'>
+                                    <div key={index} className=' flex items-center space-x-4 max-[600px]:flex-col'>
+                                        <img src={org.img} alt={org.name} className=' w-42 h-32 max-[600px]:w-full object-cover rounded-md' />
                                         <div className='flex-1'>
                                             <h2 className='text-lg font-semibold'>{org.name}</h2>
                                             <p><strong>Hudud:</strong> {org.region}</p>

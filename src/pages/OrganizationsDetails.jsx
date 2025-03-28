@@ -62,56 +62,38 @@ const OrganizationsDetails = () => {
     return (
         <div className='fullContainer'>
             <Sidebar>
-                <div className='grid grid-cols-12 gap-5'>
-                    <div className='pt-4 col-span-9'>
-                        <h1 className='!font-bold text-3xl mb-4'>
+                <div className='grid grid-cols-1 md:grid-cols-12 gap-5'>
+                    <div className='pt-4 md:col-span-9'>
+                        <h1 className='!font-bold text-2xl md:text-3xl mb-4'>
                             {university.name}
                         </h1>
 
                         {/* Navigatsiya tugmalari */}
-                        <div className="flex space-x-4 border-b border-gray-500 pb-2">
-                            <button className={`px-4 py-2 ${activeTab === 'umumiy' ? 'border-b-2 border-blue-500 font-bold' : ''}`} onClick={() => setActiveTab('umumiy')}>Umumiy ma'lumot</button>
-                            <button className={`px-4 py-2 ${activeTab === 'tashkilot' ? 'border-b-2 border-blue-500 font-bold' : ''}`} onClick={() => setActiveTab('tashkilot')}>Tashkilot haqida</button>
-                            <button className={`px-4 py-2 ${activeTab === 'rahbar' ? 'border-b-2 border-blue-500 font-bold' : ''}`} onClick={() => setActiveTab('rahbar')}>Rahbariyat</button>
-                            <button className={`px-4 py-2 ${activeTab === 'otm' ? 'border-b-2 border-blue-500 font-bold' : ''}`} onClick={() => setActiveTab('otm')}>Huzuridagi OTM</button>
-                            <button className={`px-4 py-2 ${activeTab === 'itm' ? 'border-b-2 border-blue-500 font-bold' : ''}`} onClick={() => setActiveTab('itm')}>Huzuridagi ITM</button>
+                        <div className="flex flex-wrap gap-2 md:gap-4 border-b border-gray-500 pb-2">
+                            {['umumiy', 'tashkilot', 'rahbar', 'otm', 'itm'].map(tab => (
+                                <button key={tab}
+                                    className={`px-4 py-2 text-sm md:text-base ${activeTab === tab ? 'border-b-2 border-blue-500 font-bold' : ''}`}
+                                    onClick={() => setActiveTab(tab)}>
+                                    {tab === 'umumiy' ? "Umumiy ma'lumot" :
+                                        tab === 'tashkilot' ? "Tashkilot haqida" :
+                                            tab === 'rahbar' ? "Rahbariyat" :
+                                                tab === 'otm' ? "Huzuridagi OTM" : "Huzuridagi ITM"}
+                                </button>
+                            ))}
                         </div>
-
 
                         {/* Umumiy ma'lumot */}
                         {activeTab === 'umumiy' && (
                             <div className="mt-4 ">
-                                <p className='font-bold text-xl'>{university.title}</p>
-                                <div className='flex gap-5 items-center'>
-                                    <img className='w-[300px]' src={university.img} alt="" />
+                                <p className='font-bold text-lg md:text-xl'>{university.title}</p>
+                                <div className='flex flex-col md:flex-row gap-5 items-center'>
+                                    <img className='w-full md:w-[300px]' src={university.img} alt="" />
                                     <div>
-
-                                        <h2 className="text-xl font-semibold">Umumiy ma'lumot</h2>
+                                        <h2 className="text-lg md:text-xl font-semibold">Umumiy ma'lumot</h2>
                                         <p>Hudud: {university.location}</p>
                                         <p>Tashkilot turi: {university.type}</p>
-                                        <p>
-                                            Manzil:{" "}
-                                            <a
-                                                href={`https://www.google.com/maps/search/${encodeURIComponent(university.address)}`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-blue-500 hover:underline"
-                                            >
-                                                {university.address}
-                                            </a>
-                                        </p>
-                                        <p>
-                                            Veb-sayt:{" "}
-                                            <a
-                                                href={university.website}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-blue-500 hover:underline"
-                                            >
-                                                {university.website}
-                                            </a>
-                                        </p>
-
+                                        <p>Manzil: <a href={`https://www.google.com/maps/search/${encodeURIComponent(university.address)}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">{university.address}</a></p>
+                                        <p>Veb-sayt: <a href={university.website} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">{university.website}</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -120,19 +102,18 @@ const OrganizationsDetails = () => {
                         {/* Tashkilot haqida */}
                         {activeTab === 'tashkilot' && (
                             <div className="mt-4">
-                                <h2 className="text-xl font-semibold">Tashkilot haqida</h2>
+                                <h2 className="text-lg md:text-xl font-semibold">Tashkilot haqida</h2>
                                 <p>Tashkil topgan sana: {university.established}</p>
                                 <p>{university.description}</p>
                             </div>
                         )}
 
-
                         {activeTab === 'rahbar' && (
-                            <div className="mt-4 ">
-                                <div className='border bg-white border-gray-400 rounded p-2 flex gap-5'>
-                                    <img className='w-[250px] rounded' src={university.rahbar} alt="" />
+                            <div className="mt-4">
+                                <div className='border bg-white border-gray-400 rounded p-2 flex flex-col md:flex-row gap-5'>
+                                    <img className='w-full md:w-[250px] rounded' src={university.rahbar} alt="" />
                                     <div className='pt-4'>
-                                        <p className='font-bold text-[18px]'>Popov Vasilii Aleksandrovich</p>
+                                        <p className='font-bold text-lg'>Popov Vasilii Aleksandrovich</p>
                                         <p>Direktor</p>
                                         <PhoneFilled />
                                     </div>
@@ -140,64 +121,18 @@ const OrganizationsDetails = () => {
                             </div>
                         )}
 
-
-                        {activeTab === 'otm' && (
-                            <div className="mt-4 ">
-                                {university.otm.map((otm, index) => (
-                                    <div key={index} className='bg-white border border-gray-400 rounded p-2 flex gap-5 mb-4'>
-                                        <img className='w-[250px] rounded' src={otm.img} alt={otm.name} />
+                        {['otm', 'itm'].includes(activeTab) && (
+                            <div className="mt-4">
+                                {(activeTab === 'otm' ? university.otm : university.itm).map((item, index) => (
+                                    <div key={index} className='bg-white border border-gray-400 rounded p-2 flex flex-col md:flex-row gap-5 mb-4'>
+                                        <img className='w-full md:w-[250px] rounded' src={item.img} alt={item.name} />
                                         <div className='pt-4'>
-                                            <p className='font-bold text-[18px]'>{otm.name}</p>
-                                            <p>Hudud: {otm.location}</p>
-                                            <p>Manzil: {otm.address}</p>
-                                            <p>Telefon: {otm.phone}</p>
-                                            <p>
-                                                Email:{" "}
-                                                <a
-                                                    href={`mailto:${otm.email}`}
-                                                    className="text-blue-500 hover:underline"
-                                                >
-                                                    {otm.email}
-                                                </a>
-                                            </p>
-                                            <p>
-                                                Veb-sayt:{" "}
-                                                <a
-                                                    href={otm.website}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="text-blue-500 hover:underline"
-                                                >
-                                                    {otm.website}
-                                                </a>
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-
-                        {activeTab === 'itm' && (
-                            <div className="mt-4 bg-white">
-                                {university.itm.map((itm, index) => (
-                                    <div key={index} className='border border-gray-400 rounded p-2 flex gap-5 mb-4'>
-                                        <img className='w-[250px] rounded' src={itm.img} alt={itm.name} />
-                                        <div className='pt-4'>
-                                            <p className='font-bold text-[18px]'>{itm.name}</p>
-                                            <p>Hudud: {itm.location}</p>
-                                            <p>Manzil: {itm.address}</p>
-                                            <p>Telefon: {itm.phone}</p>
-                                            <p>
-                                                Email:{" "}
-                                                <a
-                                                    href={`mailto:${itm.email}`}
-                                                    className="text-blue-500 hover:underline"
-                                                >
-                                                    {itm.email}
-                                                </a>
-                                            </p>
-                                            <p>Veb-sayt: <a href={itm.website} className="text-blue-500">{itm.website}</a></p>
+                                            <p className='font-bold text-lg'>{item.name}</p>
+                                            <p>Hudud: {item.location}</p>
+                                            <p>Manzil: {item.address}</p>
+                                            <p>Telefon: {item.phone}</p>
+                                            <p>Email: <a href={`mailto:${item.email}`} className="text-blue-500 hover:underline">{item.email}</a></p>
+                                            <p>Veb-sayt: <a href={item.website} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">{item.website}</a></p>
                                         </div>
                                     </div>
                                 ))}

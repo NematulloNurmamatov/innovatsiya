@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Layout/Sidebar';
 import { EyeOutlined, CalendarOutlined, SearchOutlined, ReloadOutlined } from '@ant-design/icons';
 import { Input, Button, DatePicker } from 'antd';
+import Search from '../components/search/Search';
 
 const { RangePicker } = DatePicker;
 
@@ -36,28 +37,12 @@ const Dayjeyts = () => {
         },
     ];
 
-    const [searchTerm, setSearchTerm] = useState("");
-    const [dateRange, setDateRange] = useState(null);
+    // const [searchTerm, setSearchTerm] = useState("");
+    // const [dateRange, setDateRange] = useState(null);
     const [filteredNews, setFilteredNews] = useState(newsData);
 
     // Qidiruvni bajarish
-    const handleSearch = () => {
-        const filtered = newsData.filter((news) => {
-            const matchesTitle = news.title.toLowerCase().includes(searchTerm.toLowerCase());
-            const matchesDate =
-                !dateRange ||
-                (new Date(news.date) >= dateRange[0]._d && new Date(news.date) <= dateRange[1]._d);
-            return matchesTitle && matchesDate;
-        });
-        setFilteredNews(filtered);
-    };
 
-    // Filtrlarni tozalash
-    const clearFilters = () => {
-        setSearchTerm("");
-        setDateRange(null);
-        setFilteredNews(newsData);
-    };
 
     // Sahifaga o'tish funksiyasi
     const navigateToDetails = (id) => {
@@ -71,37 +56,8 @@ const Dayjeyts = () => {
                     <h1 className="!font-black text-2xl mb-6">Dayjestlar</h1>
 
                     {/* Qidiruv tizimi */}
-                    <div className="flex flex-wrap gap-4 mb-4">
-                        <Input
-                            placeholder="Yangilik nomi"
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                            className="w-full md:w-1/3"
-                            size="large"
-                        />
-                        <RangePicker
-                            className="w-full md:w-1/3"
-                            size="large"
-                            onChange={(dates) => setDateRange(dates)}
-                        />
-                        <div className="flex gap-2">
-                            <Button
-                                type="primary"
-                                icon={<SearchOutlined />}
-                                size="large"
-                                onClick={handleSearch}
-                            >
-                                Qidirish
-                            </Button>
-                            <Button
-                                icon={<ReloadOutlined />}
-                                size="large"
-                                onClick={clearFilters}
-                            >
-                                Tozalash
-                            </Button>
-                        </div>
-                    </div>
+                    <Search newsData={newsData} setFilteredNews={setFilteredNews} />
+
 
                     {/* Yangiliklar kartalari */}
                     {filteredNews.length > 0 ? (

@@ -128,19 +128,19 @@ export default function TechnosDetails() {
         <div className='fullContainer'>
             <Sidebar>
                 <div className="p-5 mt-10 max-w-4xl mx-auto bg-white rounded-lg shadow-lg">
-                    <h1 className="text-3xl font-bold">{techno.name}</h1>
-                    <div className='flex items-center gap-5'>
-                        <img className="w-64 h-64 object-cover my-4 rounded" src={techno.img} alt={techno.name} />
-                        <div>
+                    <h1 className="text-3xl font-bold text-center md:text-left">{techno.name}</h1>
+                    <div className='flex flex-col md:flex-row items-center gap-5'>
+                        <img className="w-full md:w-64 h-64 object-cover my-4 rounded" src={techno.img} alt={techno.name} />
+                        <div className="text-center md:text-left">
                             <p><strong>Manzil:</strong> {techno.location}</p>
                             <p><strong>Telefon:</strong> {techno.phone}</p>
-                            <p><strong>Email:</strong> <a href={`mailto:${techno.email}`} className="text-blue-600">{techno.email}</a></p>
-                            <p><strong>Web-sayt:</strong> <a href={techno.website} target="_blank" className="text-blue-600">{techno.website}</a></p>
+                            <p><strong>Email:</strong> <a href={`mailto:${techno.email}`} className="text-blue-600 break-all">{techno.email}</a></p>
+                            <p><strong>Web-sayt:</strong> <a href={techno.website} target="_blank" className="text-blue-600 break-all">{techno.website}</a></p>
                             <p className="mt-4">{techno.description}</p>
                         </div>
                     </div>
-                    <p>Oʻzbekiston Respublikasi Prezidentining 2017 yil 5 iyundagi “Toshkent shahrining Yashnobod tumanida innovatsiya texnoparkini tashkil qilish toʻgʻrisida”gi 5068-sonli Farmoni bilan “Yashnobod” innovatsion texnoparki tashkil etilgan.</p>
-                    <p> Hozirgi kunda “Yashnobod” innovatsion texnoparki rezidentlari jami 44 ta innovatsion loyihalari bilan quyidagi yoʻnalishlarda faoliyat yuritmoqda. Jumladan; kimyo texnologiyalari, biotexnologiyalar, farmatsevtika va tibbiyot biotexnologiyalari, oʻsimliklarni himoya qilish vositalari, qishloq hoʻjaligi, qurilish materiallari, axborot kommunikatsiya texnologiyalari va boshqa yoʻnalishlarda samarali ishlarni amalga oshirib kelishmoqda.</p>
+                    <p className="mt-4 text-justify">Oʻzbekiston Respublikasi Prezidentining 2017 yil 5 iyundagi “Toshkent shahrining Yashnobod tumanida innovatsiya texnoparkini tashkil qilish toʻgʻrisida”gi 5068-sonli Farmoni bilan “Yashnobod” innovatsion texnoparki tashkil etilgan.</p>
+                    <p className="mt-2 text-justify">Hozirgi kunda “Yashnobod” innovatsion texnoparki rezidentlari jami 44 ta innovatsion loyihalari bilan quyidagi yoʻnalishlarda faoliyat yuritmoqda. Jumladan; kimyo texnologiyalari, biotexnologiyalar, farmatsevtika va tibbiyot biotexnologiyalari, oʻsimliklarni himoya qilish vositalari, qishloq xoʻjaligi, qurilish materiallari, axborot kommunikatsiya texnologiyalari va boshqa yoʻnalishlarda samarali ishlarni amalga oshirib kelishmoqda.</p>
                 </div>
             </Sidebar>
         </div>

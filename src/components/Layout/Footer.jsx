@@ -13,7 +13,7 @@ const Footer = () => {
                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Emblem_of_Uzbekistan.svg/2012px-Emblem_of_Uzbekistan.svg.png"
                             alt="Uzbekistan Emblem"
                         />
-                        <span className="ml-3 text-xl">O'zbekiston Respublikasi <span className='font-black'>MILLIY ILMIY PORTALI</span></span>
+                        <span className="ml-3 text-xl max-[600px]:!text-[16px]">O'zbekiston Respublikasi <br /> <span className='font-black'>MILLIY ILMIY PORTALI</span></span>
                     </Link>
                     <Link className='hover:text-amber-400 transition text-white'>
                         Главная
@@ -144,4 +144,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default Footer 

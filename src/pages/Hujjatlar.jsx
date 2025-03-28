@@ -71,7 +71,7 @@ const Hujjatlar = () => {
                 <div className='pt-12 container'>
                     <h1 className='!font-black text-2xl'>Normativ huquqiy hujjatlar</h1>
 
-                    <div className="flex gap-4 mb-4">
+                    <div className="grid grid-cols-4 gap-4 max-[1200px]:grid-cols-3 max-[920px]:grid-cols-2 max-[767px]:grid-cols-1 mb-4">
                         {/* Hujjat nomi */}
                         <Input
                             placeholder="Hujjat nomi"
@@ -91,6 +91,7 @@ const Hujjatlar = () => {
                             placeholder="Hujjat turi"
                             value={searchTerm.type}
                             size='large'
+                            className='!w-full'
                             onChange={(value) => setSearchTerm({ ...searchTerm, type: value })}
                             style={{ width: 200 }}
                         >
@@ -104,6 +105,7 @@ const Hujjatlar = () => {
                             placeholder="Hujjat yili"
                             value={searchTerm.year}
                             size='large'
+                            className='!w-full'
                             onChange={(value) => setSearchTerm({ ...searchTerm, year: value })}
                             style={{ width: 120 }}
                         >

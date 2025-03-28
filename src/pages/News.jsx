@@ -16,7 +16,7 @@ const News = () => {
             date: "2024-12-17",
             views: 84,
             description: "Ilmiy faoliyatga oid davlat dasturlari doirasida amalga oshirilayotgan loyihalar monitoringi...",
-            image: "https://via.placeholder.com/300x150?text=Ilmiy+Loyiha",
+            image: "https://nsp.gov.uz/static/uploads/news_img10050976-e394-4275-a15e-77d2d93d9d03.jpg",
         },
         {
             id: 2,
@@ -24,7 +24,7 @@ const News = () => {
             date: "2024-12-12",
             views: 25,
             description: "Ilon Maskning SpaceX aerokosmik kompaniyasi dunyodagi eng qimmat startapga aylandi...",
-            image: "https://via.placeholder.com/300x150?text=SpaceX",
+            image: "https://nsp.gov.uz/static/uploads/news_img10050976-e394-4275-a15e-77d2d93d9d03.jpg",
         },
         {
             id: 3,
@@ -32,7 +32,7 @@ const News = () => {
             date: "2024-11-05",
             views: 45,
             description: "Texnologiya olamidagi yangi yutuqlarni o'zida jamlagan ko'rgazma ochildi...",
-            image: "https://via.placeholder.com/300x150?text=Ko'rgazma",
+            image: "https://nsp.gov.uz/static/uploads/news_img10050976-e394-4275-a15e-77d2d93d9d03.jpg",
         },
     ];
 
@@ -108,13 +108,13 @@ const News = () => {
                         filteredNews.map((news) => (
                             <div
                                 key={news.id}
-                                className="border bg-white p-4 rounded-md border-gray-300 mt-5 shadow-md flex gap-4 cursor-pointer hover:shadow-lg transition duration-200"
+                                className="border bg-white p-4 rounded-md border-gray-300 mt-5 shadow-md flex  max-[700px]:flex-col gap-4 cursor-pointer hover:shadow-lg transition duration-200"
                                 onClick={() => navigateToDetails(news.id)}
                             >
                                 <img
                                     src={news.image}
                                     alt={news.title}
-                                    className="w-40 h-24 object-cover rounded-md"
+                                    className="w-40 max-[700px]:w-full object-cover rounded-md"
                                 />
                                 <div className="flex flex-col justify-between flex-1">
                                     <div>

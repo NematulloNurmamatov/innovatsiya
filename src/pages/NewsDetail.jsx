@@ -9,7 +9,7 @@ const newsData = [
         date: "2024-12-17",
         views: 84,
         description: "⚡️To the attention of applicants who want to apply for independent research!...",
-        image: "https://via.placeholder.com/300x150?text=Ilmiy+Loyiha",
+        image: "https://nsp.gov.uz/static/uploads/news_img10050976-e394-4275-a15e-77d2d93d9d03.jpg",
     },
     {
         id: 2,
@@ -45,18 +45,18 @@ export default function NewsDetail() {
             <Sidebar>
                 <div className='py-10'>
                     <button
-                        onClick={() => navigate(-1)} // Orqaga qaytish
+                        onClick={() => navigate(-1)} 
                         className="!mb-4 px-4 py-2 bg-blue-500 !text-white rounded hover:bg-blue-600"
                     >
                         Orqaga
                     </button>
                     <div className="bg-white p-6 rounded shadow-md">
+                        <h1 className="text-2xl !font-bold max-[700px]:text-lg max-[500px]:text-md mb-2">{news.title}</h1>
                         <img
                             src={news.image}
                             alt={news.title}
-                            className="w-full h-64 object-cover rounded-md mb-4"
+                            className=" h-64 object-cover rounded-sm mb-4"
                         />
-                        <h1 className="text-2xl font-bold mb-2">{news.title}</h1>
                         <p className="text-gray-600 text-sm mb-4">{news.date}</p>
                         <p className="mb-4">{news.description}</p>
                         <p className="text-gray-500 text-sm">

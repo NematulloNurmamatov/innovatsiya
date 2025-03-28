@@ -8,8 +8,8 @@ const NewsDetails = () => {
     return (
         <div className='fullContainer'>
             <Sidebar>
-                <div className='grid grid-cols-12 gap-5'>
-                    <div className='pt-4 col-span-9'>
+                <div className='grid grid-cols-12 gap-5 max-[940px]:grid-cols-1 '>
+                    <div className='pt-4 col-span-9 max-[1120px]:col-span-8'>
                         <h1 className='!font-bold text-3xl'>Ilmiy loyihalar monitoringi o‘tkazilmoqda</h1>
                         <p> Details for article ID: {id}</p>
                         <img className='w-[400px] mb-5' src="https://nsp.gov.uz/static/uploads/news_img09c69724-1542-4ae6-b909-9f1844182fab.jpg" alt="" />
@@ -22,7 +22,8 @@ const NewsDetails = () => {
                         </p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, ea laborum vel perspiciatis ab officia quisquam, quae perferendis aspernatur impedit, temporibus corrupti. Tempore aliquam magnam incidunt, unde fugit rerum beatae.</p>
                     </div>
-                    <div className='col-span-3 flex flex-col gap-4 pt-5'>
+
+                    <div className='col-span-3 min-w-[200px] flex flex-col gap-4 pt-5'>
                         <h1 className='text-xl !font-black'>So'nggi yangiliklar</h1>
                         <div className='border border-gray-500 rounded p-2 bg-gray-50 hover:shadow-lg'>
                             <p>17.12.2024</p>

@@ -12,7 +12,7 @@ export default function Blutten() {
             <Sidebar>
                 <div className='py-10'>
                     <p className='font-black text-2xl'>Intellektual mulk obekti byulletenlari</p>
-                    <div className='grid grid-cols-4 gap-5 mb-5'>
+                    <div className='grid grid-cols-4 gap-5 max-[1000px]:grid-cols-3 max-[880px]:grid-cols-2 max-[600px]:grid-cols-1 mb-5'>
                         {
                             [...Array(12)].map((_, index) => (
                                 <div key={index} className="blutten-item border border-gray-400 rounded-md">

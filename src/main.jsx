@@ -66,6 +66,7 @@ import ItkDetails from './pages/ItkDetails';
 import IdeasDetails from './pages/IdeasDetails';
 import EventsDetails from './pages/EventsDetails';
 import HistorysDetails from './pages/HistorysDetails';
+import ErrorPage from './components/error/ErrorPage';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -128,6 +129,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/news-details/:id" element={<NewsDetails />} />
           <Route path="/organization-details/:id" element={<OrganizationDetails />} />
           <Route path="/organizations-details/:id" element={<OrganizationsDetails />} />
+          <Route path="/organization-details2/:id" element={<OrganizationDetails2 />} />
           <Route path="/technos-details/:id" element={<TechnosDetails />} />
           <Route path="/accelators-details/:id" element={<AccelatorsDetails />} />
           <Route path="/outinst-details/:id" element={<OutinstDetails />} />
@@ -142,7 +144,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 
 
-          <Route path='*' element={<h1>Error page 404</h1>} />
+          <Route path='*' element={<ErrorPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

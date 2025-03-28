@@ -69,8 +69,8 @@ export default memo(function Sidebar({ children }) {
             </Sider>
 
             {/* Content Area */}
-            <Layout style={{ padding: '0 24px 24px' }}
-                className='max-[767px]:ml-[-270px]'
+            <Layout style={{ padding: '0 14px 14px' }}
+                className=' max-[767px]:ml-[-270px]'
             >
                 <Content
                     style={{
@@ -81,7 +81,7 @@ export default memo(function Sidebar({ children }) {
                 >
                     <button
                         onClick={toggleSidebar}
-                        className="md:hidden bg-gray-200 p-2 !mt-4 rounded-md mb-4 z-40"
+                        className="md:hidden bg-gray-200 !mt-4 rounded-md mb-4 z-40"
                     >
                         {isSidebarOpen ? '✖' : '☰'}
                     </button>
