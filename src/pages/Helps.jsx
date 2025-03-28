@@ -132,7 +132,7 @@ const Helps = () => {
                             >
                                 <FaRegFilePdf className="text-4xl text-red-500" />
                                 <div className="flex-1">
-                                    <p className="font-semibold text-lg">{item.title}</p>
+                                    <p className="font-semibold text-lg max-[600px]:text-[16px] leading-6">{item.title}</p>
                                     <p className="text-sm text-gray-500">
                                         {item.docType} {item.docNumber}, {item.date}
                                     </p>

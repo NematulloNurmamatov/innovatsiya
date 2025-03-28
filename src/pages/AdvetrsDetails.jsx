@@ -54,9 +54,9 @@ export default function AdvertsDetails() {
                         <img
                             src={news.image}
                             alt={news.title}
-                            className="w-full h-64 object-cover rounded-md mb-4"
+                            className=" h-64 object-cover rounded-md mb-4"
                         />
-                        <h1 className="text-2xl font-bold mb-2">{news.title}</h1>
+                        <h1 className="text-2xl max-[700px]:text-lg font-bold mb-2">{news.title}</h1>
                         <p className="text-gray-600 text-sm mb-4">{news.date}</p>
                         <p className="mb-4">{news.description}</p>
                         <p className="text-gray-500 text-sm">

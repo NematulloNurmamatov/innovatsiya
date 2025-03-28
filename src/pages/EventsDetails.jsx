@@ -43,7 +43,7 @@ export default function NewsDetail() {
     return (
         <div className="">
             <Sidebar>
-                <div className='py-10'>
+                <div className='py-6'>
                     <button
                         onClick={() => navigate(-1)} // Orqaga qaytish
                         className="!mb-4 px-4 py-2 bg-blue-500 !text-white rounded hover:bg-blue-600"
@@ -54,7 +54,7 @@ export default function NewsDetail() {
                         <img
                             src={news.image}
                             alt={news.title}
-                            className="w-[70%] mx-auto h-[60vh] object-cover rounded-md mb-4"
+                            className=" h-[60vh] rounded-md mb-4"
                         />
                         <h1 className="text-2xl font-bold mb-2">{news.title}</h1>
                         <p className="text-gray-600 text-sm mb-4">{news.date}</p>

@@ -107,13 +107,13 @@ const News = () => {
                         filteredNews.map((news) => (
                             <div
                                 key={news.id}
-                                className="border bg-white p-4 rounded-md border-gray-300 mt-5 shadow-md flex gap-4 cursor-pointer hover:shadow-lg transition duration-200"
+                                className="border bg-white p-4 rounded-md border-gray-300 mt-5 shadow-md flex gap-4 cursor-pointer hover:shadow-lg transition duration-200 max-[600px]:flex-col "
                                 onClick={() => navigateToDetails(news.id)}
                             >
                                 <img
                                     src={news.image}
                                     alt={news.title}
-                                    className="w-40 h-24 object-cover rounded-md"
+                                    className="w-40 h-24 max-[600px]:w-full max-[600px]:h-48 object-cover rounded-md"
                                 />
                                 <div className="flex flex-col justify-between flex-1">
                                     <div>

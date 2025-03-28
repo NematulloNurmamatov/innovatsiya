@@ -107,13 +107,13 @@ const Events = () => {
                         filteredData.map((event) => (
                             <div
                                 key={event.id}
-                                className="border bg-white p-4 rounded-md border-gray-300 mb-4 shadow-md flex items-center gap-4 hover:shadow-lg transition duration-200 cursor-pointer"
+                                className="border bg-white p-4 rounded-md border-gray-300 mb-4 shadow-md flex items-center gap-4 hover:shadow-lg transition duration-200 cursor-pointer max-[600px]:flex-col"
                                 onClick={() => navigateToDetails(event.id)}
                             >
                                 <img
                                     src={event.img}
                                     alt={event.title}
-                                    className="w-20 h-20 object-cover rounded-md"
+                                    className="w-32 h-36 max-[600px]:w-full max-[600px]:h-48 object-cover rounded-md"
                                 />
                                 <div className="flex-1">
                                     <p className="font-semibold text-lg">{event.title}</p>

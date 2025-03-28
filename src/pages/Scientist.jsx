@@ -6,11 +6,11 @@ export default function Scientist() {
         <div className="fullContainer">
             <Sidebar>
                 <div className="py-10 px-6 text-center">
-                    <h1 className="!font-black text-2xl">Ilmiy-stajirovka bo'yicha Normativ-huquqiy asos</h1>
+                    <h1 className="!font-black text-2xl max-[700px]:text-xl max-[700px]:leading-7 ">Ilmiy-stajirovka bo'yicha Normativ-huquqiy asos</h1>
 
-                    <h2 className="!text-lg !font-semibold mt-4">O‘zbekiston Respublikasi Vazirlar Mahkamasining qarori</h2>
+                    <h2 className="!text-lg !font-semibold mt-4 max-[700px]:text-xl max-[700px]:leading-7">O‘zbekiston Respublikasi Vazirlar Mahkamasining qarori</h2>
 
-                    <p className="text-blue-800 !text-lg mt-2">
+                    <p className="text-blue-800 !text-lg mt-2 max-[700px]:leading-6">
                         Ilmiy va innovatsion faoliyat bilan shug‘ullanib kelayotgan iqtidorli yoshlarni qo‘llab-quvvatlash chora-tadbirlari to‘g‘risida
                     </p>
 

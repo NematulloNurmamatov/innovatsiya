@@ -64,20 +64,20 @@ const Dayjeyts = () => {
                         filteredNews.map((news) => (
                             <div
                                 key={news.id}
-                                className="border bg-white p-4 rounded-md border-gray-300 mt-5 shadow-md flex gap-4 cursor-pointer hover:shadow-lg transition duration-200"
+                                className="border bg-white p-4 rounded-md border-gray-300 mt-5 shadow-md flex flex-col sm:flex-row gap-4 cursor-pointer hover:shadow-lg transition duration-200"
                                 onClick={() => navigateToDetails(news.id)}
                             >
                                 <img
                                     src={news.image}
                                     alt={news.title}
-                                    className="w-40 h-60 object-cover rounded-md"
+                                    className="w-full sm:w-40 h-48 sm:h-60 object-cover rounded-md"
                                 />
                                 <div className="flex flex-col justify-between flex-1">
                                     <div>
                                         <p className="font-medium text-lg">{news.title}</p>
-                                        <p className="text-sm text-gray-600">{news.description}</p>
+                                        <p className="text-sm text-gray-600 hidden sm:block">{news.description}</p>
                                     </div>
-                                    <div className="flex items-center justify-between text-sm text-gray-500">
+                                    <div className="flex items-center justify-between text-sm text-gray-500 mt-2">
                                         <p>
                                             <CalendarOutlined /> {news.date}
                                         </p>
@@ -87,6 +87,7 @@ const Dayjeyts = () => {
                                     </div>
                                 </div>
                             </div>
+
                         ))
                     ) : (
                         <p className="mt-5">Qidiruv natijalariga mos yangiliklar topilmadi.</p>

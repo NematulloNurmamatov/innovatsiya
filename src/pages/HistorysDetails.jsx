@@ -54,7 +54,7 @@ export default function NewsDetail() {
                         <img
                             src={news.image}
                             alt={news.title}
-                            className="w-[50%] mx-auto min-w-[300px] object-cover rounded-md mb-4"
+                            className="w-[50%] min-w-[300px] object-cover rounded-md mb-4"
                         />
                         <h1 className="text-2xl font-bold mb-2">{news.title}</h1>
                         <p className="text-gray-600 text-sm mb-4">{news.date}</p>
